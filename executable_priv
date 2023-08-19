@@ -1,0 +1,6 @@
+#!/bin/bash
+mv ~/.zsh_history ~/.zh
+zsh
+rm ~/.zsh_history
+mv ~/.zh ~/.zsh_history
+exit

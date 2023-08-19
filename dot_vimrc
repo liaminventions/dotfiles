@@ -1,0 +1,6 @@
+call plug#begin()
+Plug 'vimsence/vimsence'
+Plug 'jtbairdsr/vim-center-comment'
+call plug#end()
+
+au BufRead,BufNewFile *.s set filetype=s

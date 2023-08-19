@@ -1,0 +1,36 @@
+{
+    "label" : "lock",
+    "action" : "~/.config/hypr/scripts/lock",
+    "text" : "Lock",
+    "keybind" : "z"
+}
+{
+    "label" : "logout",
+    "action" : "pkill -u $USER",
+    "text" : "Logout",
+    "keybind" : "x"
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "Reboot",
+    "keybind" : "c"
+}
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text" : "Shutdown",
+    "keybind" : "v"
+}
+{
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text" : "Hibernate",
+    "keybind" : "b"
+}
+{
+    "label" : "suspend",
+    "action" : "systemctl suspend",
+    "text" : "Suspend",
+    "keybind" : "n"
+}

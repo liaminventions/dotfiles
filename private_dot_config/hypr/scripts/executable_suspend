@@ -1,0 +1,18 @@
+#!/bin/bash
+set -ex
+
+CACHE_DIR="$HOME/.cache/power"
+
+function lid() {
+  [ -f "$CACHE_DIR/suspend.lock" ] && systemctl suspend
+}
+
+function toggle() {
+  [ -f "$CACHE_DIR/suspend.lock" ] && rm "$CACHE_DIR/suspend.lock" || touch "$CACHE_DIR/suspend.lock"
+}
+
+case "$1" in
+  "lid") lid;;
+  "toggle") toggle;;
+  *) echo "unknown command";;
+esac

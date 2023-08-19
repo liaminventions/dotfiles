@@ -1,0 +1,16 @@
+#!/bin/bash
+set -ex
+NO=0
+while [ $NO = 0 ]
+do
+  systemctl --user status xdg-desktop-portal.service | grep "Started Portal service."
+  re=$?
+  if [ $re = 0 ]
+  then
+    bash -c "nm-applet --indicator & disown" &
+    bash -c "blueman-applet" &
+    bash -c "exec premid" &
+    bash -c "/opt/BreakTimer/breaktimer" &
+    NO=1
+  fi
+done

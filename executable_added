@@ -1,0 +1,3 @@
+#!/bin/bash
+touch $1
+chezmoi add $1

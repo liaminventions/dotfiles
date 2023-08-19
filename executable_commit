@@ -1,0 +1,5 @@
+#!/bin/bash
+cd ~/.local/share/chezmoi/
+git add .
+git commit -a -m "$1"
+exit

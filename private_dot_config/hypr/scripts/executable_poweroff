@@ -1,0 +1,18 @@
+#!/bin/bash
+set -ex
+
+CACHE_DIR="$HOME/.cache/power"
+
+function button() {
+  [ -f "$CACHE_DIR/powerbutton.lock" ] && systemctl poweroff
+}
+
+function toggle() {
+  [ -f "$CACHE_DIR/powerbutton.lock" ] && rm "$CACHE_DIR/powerbutton.lock" || touch "$CACHE_DIR/powerbutton.lock"
+}
+
+case "$1" in
+  "button") button;;
+  "toggle") toggle;;
+  *) echo "unknown command";;
+esac

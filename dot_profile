@@ -1,0 +1,12 @@
+#test -f /etc/profile && . /etc/profile
+# Second read /etc/xprofile and .xprofile for X specific setup
+#test -f /etc/xprofile && . /etc/xprofile
+#test -f "$HOME/.xprofile" && . "$HOME/.xprofile"
+#plymouth deactivate
+#sleep .3
+#plymouth quit --retain-splash
+Hyprland && echo "goodbye, now logging out" && exit 0 \
+ || echo "$? hyperland.sh failed" && tty |grep tty1 \
+  && echo "refusing autologin without hyprland on tty1" && exit 0 \
+  || echo "not on tt1, letting in"
+export QT_STYLE_OVERRIDE=kvantum

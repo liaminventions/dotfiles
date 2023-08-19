@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+while true
+do
+    case "$1" in
+        "vol-up")
+            #audio output-volume-up
+            pactl set-sink-volume @DEFAULT_SINK@ +5%
+            exit 0
+            ;;
+        "vol-down")
+            #audio output-volume-down
+            pactl set-sink-volume @DEFAULT_SINK@ -5%
+            exit 0
+            ;;
+        "mute")
+            #audio output-mute
+            pactl set-sink-mute @DEFAULT_SINK@ toggle
+            exit 0
+            ;;
+        "mic-mute")
+            #audio input-mute
+            exit 0
+            ;;
+    esac
+done

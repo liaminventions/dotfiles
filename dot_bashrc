@@ -1,0 +1,23 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias la='ls -al'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+[ -r /home/waverider/.config/byobu/prompt ] && . /home/waverider/.config/byobu/prompt   #byobu-prompt#
+
+alias music="/home/waverider/cmus-discord-rpc/target/release/cmus-discord-rpc & cmus"
+
+export EDITOR=lvim;
+export VISUAL=lvim;
+
+alias rm='rmtrash'
+alias rmdir='rmdirtrash'
+alias sudo='sudo '
+
+#export PATH="/opt/toolchains/gen/bin/:$PATH"
