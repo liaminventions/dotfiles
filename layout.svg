@@ -139,8 +139,8 @@
      showgrid="true"
      gridtolerance="15px"
      showborder="false"
-     inkscape:window-width="1038"
-     inkscape:window-height="1032"
+     inkscape:window-width="846"
+     inkscape:window-height="443"
      inkscape:window-x="0"
      inkscape:window-y="0"
      showguides="true"
@@ -865,7 +865,12 @@
          x="411.38202"
          y="-105.16206"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.5778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke:none;stroke-width:1.43389"
-         id="tspan7408">reinit bar</tspan></text><text
+         id="tspan7408">reinit bar</tspan><tspan
+         sodipodi:role="line"
+         x="411.38202"
+         y="-85.689812"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.5778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ff00ff;stroke:none;stroke-width:1.43389"
+         id="tspan7">sync mail</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.1217px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0000ff;stroke:none;stroke-width:1.3594"
        x="616.03735"
