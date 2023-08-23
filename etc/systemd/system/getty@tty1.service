@@ -5,7 +5,8 @@ After=initrd-switch-root.service
 
 Wants=systemd-udev-trigger.service 
 After=systemd-udev-trigger.service 
-Wants=seatd.service After=seatd.service 
+Wants=seatd.service 
+After=seatd.service 
 Wants=systemd-logind.service 
 After=systemd-logind.service
 

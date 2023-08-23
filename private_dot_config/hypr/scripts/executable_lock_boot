@@ -1,4 +1,5 @@
 #!/bin/bash
+gpg-connect-agent --no-autostart reloadagent /bye
 swaylock \
 -i ~/.config/hypr/bg/a-neon-city-4m-1920x1080.jpg \
 --indicator \
