@@ -193,7 +193,7 @@ lvim.plugins = {
     --
        {"andweeb/presence.nvim"},
        {"habamax/vim-godot"},
-       {"neoclide/coc.nvim"},
+    --   {"neoclide/coc.nvim"},
        {"mfussenegger/nvim-jdtls"},
      --},
  }
