@@ -5,4 +5,6 @@ Plug 'habamax/vim-godot'
 Plug 'rhysd/vim-grammarous'
 call plug#end()
 
+colorscheme elflord
+
 au BufRead,BufNewFile *.s set filetype=s
