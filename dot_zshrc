@@ -136,6 +136,7 @@ alias co="/home/waverider/commit"
 alias copu="/home/waverider/copu"
 alias priv="/home/waverider/priv"
 alias rn="mv"
+alias v="/home/waverider/.local/bin/lvim"
 
 export EDITOR=lvim;
 export VISUAL=lvim;
