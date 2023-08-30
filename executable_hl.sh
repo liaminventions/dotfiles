@@ -1,11 +1,16 @@
 #!/bin/sh
-[ ! -f /run/udev/data/+drm:card0-eDP-1 ] \
- && sudo systemctl restart systemd-udev-trigger > /dev/null
+#set -ex
+#plymouth deactivate
+#sleep .3
+#plymouth quit --retain-splash
 
-sudo systemctl status iwd|grep Active..active \
- || sudo systemctl start iwd &
+#[ ! -f /run/udev/data/+drm:card0-eDP-1 ] \
+# && sudo systemctl restart systemd-udev-trigger > /dev/null
+#
+#sudo systemctl status iwd|grep Active..active \
+# || sudo systemctl start iwd &
 
-while [ ! -f /run/udev/data/+drm:card0-eDP-1 ] ; do echo "waiting for drm" && sleep 0.2 ; done
+#while [ ! -f /run/udev/data/+drm:card0-eDP-1 ] ; do echo "waiting for drm" && sleep 0.2 ; done
 
 export USER=waverider
 [ -z $TERM ] && export TERM=linux
@@ -21,13 +26,13 @@ export USER=waverider
 [ -z $DBUS_SESSION_BUS_ADDRESS ] && export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 
 export HYPRLAND_LOG_WLR=1
-export XCURSOR_SIZE=24
+#export XCURSOR_SIZE=24
 
 # change the theme here
 #export XCURSOR_THEME=Bibata-Modern-Classic
 #export GTK_THEME=Adwaita-amoled-dark-Fix
 
-[ ! -f /run/udev/data/+drm:card0-eDP-1 ] \
- && echo "Hyprland needs drm, bailing out" && exit -1
+#[ ! -f /run/udev/data/+drm:card0-eDP-1 ] \
+# && echo "Hyprland needs drm, bailing out" && exit -1
 
 exec Hyprland > .hyprland.log.txt 2> .hyprland.err.txt

@@ -5,7 +5,9 @@ GRUB_DEFAULT="saved"
 GRUB_HIDDEN_TIMEOUT_QUIET="true"
 GRUB_TIMEOUT="0"
 GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash loglevel=3 systemd.show_status=auto rd.udev.log_level=3 vt.global_cursor_default=0 i8042.nopnp=1 i8042.dumbkbd=1 ibt=off"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash loglevel=3 systemd.show_status=auto rd.udev.log_level=3 vt.global_cursor_default=0 i8042.nopnp=1 i8042.dumbkbd=1 nvme_core.default_ps_max_latency_us=0 iommu=soft nvme_load=YES"
+# systemd.unit=multi-user.target"
+#pci=nomsi clocksource=acpi_pm 
 GRUB_CMDLINE_LINUX="rootfstype=ext4"
 
 # Preload both GPT and MBR modules so that they are not missed
