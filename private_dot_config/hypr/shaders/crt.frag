@@ -8,24 +8,25 @@ uniform lowp float time;
 #define BORDER_COLOR vec4(vec3(0.0, 0.0, 0.0), 1.0) // black border
 #define BORDER_RADIUS 1.0 // larger vignette radius
 #define BORDER_SIZE 0.01 // small border size
-#define CHROMATIC_ABERRATION_STRENGTH 0.00
+#define CHROMATIC_ABERRATION_STRENGTH 0.002
 #define DENOISE_INTENSITY 0.0001 //
-#define DISTORTION_AMOUNT 0.00 // moderate distortion amount
+#define DISTORTION_AMOUNT 0.1 // moderate distortion amount
 #define HDR_BLOOM 0.75 // bloom intensity
 #define HDR_BRIGHTNESS 0.011 // brightness
 #define HDR_CONTRAST 0.011 // contrast
-#define HDR_SATURATION 1.0// saturation
+#define HDR_SATURATION 0.1// saturation
 #define LENS_DISTORTION_AMOUNT 0.0
 #define NOISE_THRESHOLD 0.0001
 #define PHOSPHOR_BLUR_AMOUNT 0.77 // Amount of blur for phosphor glow
 #define PHOSPHOR_GLOW_AMOUNT 0.77 // Amount of phosphor glow
 #define SAMPLING_RADIUS 0.0001
 #define SCANLINE_FREQUENCY 540.0
-#define SCANLINE_THICKNESS 0.0507
+#define SCANLINE_THICKNESS 0.5
+//0.0507
 #define SCANLINE_TIME time * 471.24
 #define SHARPNESS 0.25
 #define SUPERSAMPLING_SAMPLES 16.0
-#define VIGNETTE_RADIUS 0.0 // larger vignette radius
+#define VIGNETTE_RADIUS 1.0 // larger vignette radius
 #define PI 3.14159265359
 #define TWOPI 6.28318530718
 
