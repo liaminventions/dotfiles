@@ -1,0 +1,8 @@
+#!/bin/bash
+set -ex
+
+CACHE_DIR="$HOME/.cache/power"
+
+[ -f "$CACHE_DIR/debloat.lock" ] && /home/waverider/.config/hypr/scripts/bloat debloat || /home/waverider/.config/hypr/scripts/bloat bloat 
+
+

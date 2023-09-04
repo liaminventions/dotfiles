@@ -43,9 +43,9 @@
 (defwidget stats[]
   (box :class "stats"
        :spacing 15
-    (v-iconmeter :name "ram" :active false :min 0 :max 101 :val ram-val :icon "")
-    (v-iconmeter :name "cpu" :active false :min 0 :max 101 :val cpu-val :icon "")
-    (v-iconmeter :name "dsk" :active false :min 0 :max 101 :val dsk-val :icon "")))
+    (v-iconmeter :name "ram" :active false :min 0 :max 101 :val ram-val :icon "  ")
+    (v-iconmeter :name "cpu" :active false :min 0 :max 101 :val cpu-val :icon "  ")
+    (v-iconmeter :name "dsk" :active false :min 0 :max 101 :val dsk-val :icon "  ")))
 
 (deflisten ram-val "scripts/stats follow ram")
 (deflisten cpu-val "scripts/stats follow cpu")
@@ -133,7 +133,7 @@
 (defwindow sys-menu0 
    :monitor 0
    :stacking "fg"
-   :geometry (geometry :x "5px" :y "8px" :width "1px" :anchor "top left")
+   :geometry (geometry :x "5px" :y "5px" :width "1px" :anchor "top left")
    (sys-menu-main))
 
 (defwindow sys-menu1 

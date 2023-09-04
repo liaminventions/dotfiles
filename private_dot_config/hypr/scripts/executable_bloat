@@ -1,0 +1,23 @@
+CACHE_DIR="$HOME/.cache/power"
+
+function debloat() { 
+  rm "$CACHE_DIR/debloat.lock" 
+  swww kill
+  killall waybar
+  killall eww
+  hyprctl keyword animations:enabled 0 
+}
+
+function bloat() {
+  touch "$CACHE_DIR/debloat.lock"
+  swww init
+  exec waybar &
+  # exec eww daemon -c ~/.config/eww/iceberg/menu &
+  hyprctl keyword animations:enabled 1
+}
+
+case "$1" in
+  "bloat") bloat;;
+  "debloat") debloat;;
+  *) echo "unknown command";;
+esac
