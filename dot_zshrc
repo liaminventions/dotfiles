@@ -137,8 +137,13 @@ alias copu="/home/waverider/copu"
 alias priv="/home/waverider/priv"
 alias rn="mv"
 alias v="/home/waverider/.local/bin/lvim"
+alias l="ls"
 
 export EDITOR=lvim;
 export VISUAL=lvim;
 
 # export PATH="/opt/toolchains/gen/bin/:$PATH"
+
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools

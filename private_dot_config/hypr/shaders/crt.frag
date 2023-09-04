@@ -7,7 +7,7 @@ uniform lowp float time;
 
 #define BORDER_COLOR vec4(vec3(0.0, 0.0, 0.0), 1.0) // black border
 #define BORDER_RADIUS 1.0 // larger vignette radius
-#define BORDER_SIZE 0.01 // small border size
+#define BORDER_SIZE 0.0005 // small border size
 #define CHROMATIC_ABERRATION_STRENGTH 0.002
 #define DENOISE_INTENSITY 0.0001 //
 #define DISTORTION_AMOUNT 0.1 // moderate distortion amount
@@ -19,10 +19,9 @@ uniform lowp float time;
 #define NOISE_THRESHOLD 0.0001
 #define PHOSPHOR_BLUR_AMOUNT 0.77 // Amount of blur for phosphor glow
 #define PHOSPHOR_GLOW_AMOUNT 0.77 // Amount of phosphor glow
-#define SAMPLING_RADIUS 0.0001
+#define SAMPLING_RADIUS 0.001
 #define SCANLINE_FREQUENCY 540.0
-#define SCANLINE_THICKNESS 0.5
-//0.0507
+#define SCANLINE_THICKNESS 0.05
 #define SCANLINE_TIME time * 471.24
 #define SHARPNESS 0.25
 #define SUPERSAMPLING_SAMPLES 16.0
@@ -471,7 +470,10 @@ vec4 supersample(sampler2D tex, vec2 uv, float sampleRadius, float noiseThreshol
     return bilateralFilter(tex, uv, color, sampleRadius, noiseThreshold, intensity);
 }
 void main() {
+
     vec2 tc_no_dist = v_texcoord;
+
+    #vec2 tc_no_dist = 
 
     vec2 tc = applyBarrelDistortion(tc_no_dist, DISTORTION_AMOUNT);
 
