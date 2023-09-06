@@ -13,4 +13,4 @@ sleep 1
 
 swww init
 eww -c ~/.config/eww/bg open clock
-eww -c ~/.config/eww/bg open power
+eww -c ~/.config/eww/bg open bot

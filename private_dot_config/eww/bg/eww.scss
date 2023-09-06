@@ -30,8 +30,14 @@ $surface-red: #f87070;
   font-weight: normal;
 }
 
-.power {
+//.power {
+.bot {
   background-color: transparent;
+}
+
+.bat-box {
+  font-size: 50px;
+  
 }
 
 .powermenu {
@@ -51,6 +57,16 @@ $surface-red: #f87070;
     //  color: rgba($surface-red, 0.8);
     //}
   }
+}
+
+.weather-icon {
+  font-family: NotoEmoji Nerd Font Mono;
+  font-size: 8em;
+  font-weight: bold;
+}
+
+.weather-details {
+  font-size: 2em;
 }
 
 .sep {
