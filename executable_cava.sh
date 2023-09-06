@@ -28,6 +28,9 @@ method = raw
 raw_target = $pipe
 data_format = ascii
 ascii_max_range = 7
+[input]
+method = pulse
+source = auto
 " > $config_file
 
 # run cava in the background
