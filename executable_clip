@@ -1,0 +1,5 @@
+#!/bin/bash 
+set -ex
+url=$(wl-paste)
+cd ~/Desktop/dot/dot\ v
+yt-dlp $url

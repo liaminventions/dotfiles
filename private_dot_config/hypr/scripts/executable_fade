@@ -12,3 +12,4 @@ done
 sleep 1
 
 swww init
+eww -c ~/.config/eww/clock open clock
