@@ -12,4 +12,5 @@ done
 sleep 1
 
 swww init
-eww -c ~/.config/eww/clock open clock
+eww -c ~/.config/eww/bg open clock
+eww -c ~/.config/eww/bg open power
