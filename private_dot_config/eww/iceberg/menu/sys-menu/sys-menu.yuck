@@ -125,10 +125,10 @@
 
 (defwidget powermenu[]
   (box :class "powermenu"
-    (button :class "power-lock" :onclick "../common/scripts/power lock" :tooltip "Lock" "")
-    (button :class "power-hibernate" :onclick "../common/scripts/power hibernate" :tooltip "Hibernate" "⏼")
-    (button :class "power-reboot" :onclick "../common/scripts/power reboot" :tooltip "Restart" "")
-    (button :class "power-shutdown" :onclick "../common/scripts/power shutdown" :tooltip "Shutdown" "")))
+    (button :class "power-lock" :onclick "../common/scripts/power lock" :tooltip "Lock" "  ")
+    (button :class "power-hibernate" :onclick "../common/scripts/power hibernate" :tooltip "Hibernate" " 󰤄 ")
+    (button :class "power-reboot" :onclick "../common/scripts/power reboot" :tooltip "Restart" "  ")
+    (button :class "power-shutdown" :onclick "../common/scripts/power shutdown" :tooltip "Shutdown" "  ")))
 
 (defwindow sys-menu0 
    :monitor 0
