@@ -1,5 +1,7 @@
 #!/bin/bash
 set -ex
+# this is a script to hibernate the computer at wake up in the morning + play a song using timidity
+
 
 DATE="2023-07-02" 
 TIME="12:00"

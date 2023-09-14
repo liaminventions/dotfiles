@@ -193,10 +193,14 @@ lvim.plugins = {
     --
        {"andweeb/presence.nvim"},
        {"habamax/vim-godot"},
-    --   {"neoclide/coc.nvim"},
+    -- {"neoclide/coc.nvim"},
        {"mfussenegger/nvim-jdtls"},
-     --},
+       {"wakatime/vim-wakatime"},
+    -- {"hsanson/vim-android"},
+    -- },
  }
+
+-- vim.g.android_sdk_path = {'/opt/android-sdk'}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
