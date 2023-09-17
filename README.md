@@ -24,10 +24,10 @@ now run the `hibernator` script (if you have swap set up.)
 sudo ./hibernator
 ```
 
-to apply changes, update grub
-```
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
+to apply changes, update grub with
+
+`sudo grub-mkconfig -o /boot/grub/grub.cfg` or `sudo update-grub`
+
 rebuild initramfs,
 ```
 sudo mkinitcpio -P
@@ -44,7 +44,7 @@ also, if you have a smaller screen resolution, consider un-commenting the `paddi
 
 ## nm-applet
 
-you man want to disable annoying "connection activated" notifications.
+you might want to disable annoying "connection activated" notifications.
 
 those can be disabled with
 
