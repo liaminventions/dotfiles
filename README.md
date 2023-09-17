@@ -34,6 +34,8 @@ sudo mkinitcpio -P
 ```
 and reboot.
 
+# NOTES
+
 ## waybar fonts
 
 `ttf-font-awesome` and `ttf-roboto-mono` are needed for waybar to show correctly.
@@ -54,3 +56,15 @@ gsettings set org.gnome.nm-applet disable-connected-notifications "true"
 ## cursor
 
 to set the cursor, open `nwg-look` and go to `Mouse cursor` and set the theme to `Posy's Cursor 125%`.
+
+## wf-recorder
+
+be sure to select the correct audio source with `pavucontrol` when screen recording.
+
+to do this, go to pavucontrol and to the "Recording" tab (while screen recording) and select the correct audio source.
+
+for example:
+
+![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/pa.png)
+
+also, you only have to do this once, the settings will save.
