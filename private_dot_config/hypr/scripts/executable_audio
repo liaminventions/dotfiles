@@ -25,6 +25,7 @@ elif [ $1 == "vol-down" ]; then
   pactl set-sink-volume @DEFAULT_SINK@ "-${step}%"
 elif [ $1 == "mute" ]; then
   pactl set-sink-mute @DEFAULT_SINK@ toggle
+  pactl set-sink-volume @DEFAULT_SINK@ "0%"
 elif [ $1 == "mic-mute" ]; then
   pactl set-source-mute @DEFAULT_SOURCE@ toggle
 else
