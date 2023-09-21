@@ -1,0 +1,7 @@
+swww kill
+killall waybar
+killall eww
+swww init
+exec waybar &
+eww -c ~/.config/eww/bg open clock &
+eww -c ~/.config/eww/bg open bot &
