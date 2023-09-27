@@ -60,11 +60,11 @@
 ;  :initial `date +'%D'`
   `date +'%A %B %d (%D)'`)
 
-(defpoll net :interval "100s"
-  :initial `nmcli -t -f SIGNAL,ACTIVE device wifi \ 
-    | awk -F':' '{if($2=="yes")print$1}'`
-  `nmcli -t -f SIGNAL,ACTIVE device wifi \
-    | awk -F':' '{if($2=="yes")print$1}'`)
+;(defpoll net :interval "100s"
+;  :initial `nmcli -t -f SIGNAL,ACTIVE device wifi \ 
+;    | awk -F':' '{if($2=="yes")print$1}'`
+;  `nmcli -t -f SIGNAL,ACTIVE device wifi \
+;    | awk -F':' '{if($2=="yes")print$1}'`)
 
 ;(defwidget battery []
 ;  (box :class "bat-box"
@@ -73,14 +73,14 @@
 ;    (label :text "  ")
 ;    "${EWW_BATTERY.BAT0.capacity}${EWW_BATTERY.BAT0.status == 'Charging' ? '⚡' : '%'}"))
 
-(defwidget _network [strength offline excellent good okay slow]
-  (box :class "net-box"
-       :space-evenly false
-       :spacing 8
-    (label :text {strength == "" ? offline :
-      strength < 26 ? slow :
-        strength < 51 ? okay :
-          strength < 76 ? good : excellent})))
+;(defwidget _network [strength offline excellent good okay slow]
+;  (box :class "net-box"
+;       :space-evenly false
+;       :spacing 8
+;    (label :text {strength == "" ? offline :
+;      strength < 26 ? slow :
+;        strength < 51 ? okay :
+;          strength < 76 ? good : excellent})))
 
 (defwidget timemenu []
   ;(box :class "time" :orientation "vertical"
