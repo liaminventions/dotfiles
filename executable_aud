@@ -1,0 +1,5 @@
+#!/bin/bash 
+set -ex
+url=$(wl-paste)
+cd ~/Music
+yt-dlp $url -x --audio-format flac
