@@ -473,7 +473,7 @@ void main() {
 
     vec2 tc_no_dist = v_texcoord;
 
-    #vec2 tc_no_dist = 
+    // vec2 tc_no_dist = 
 
     vec2 tc = applyBarrelDistortion(tc_no_dist, DISTORTION_AMOUNT);
 
