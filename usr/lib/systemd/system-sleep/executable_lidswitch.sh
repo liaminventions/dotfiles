@@ -8,6 +8,7 @@ case "$1" in
     ;;
     post)
       /usr/bin/touch /home/waverider/.cache/power/suspend.lock
+      /usr/bin/chown waverider:waverider /home/waverider/.cache/power/suspend.lock
     ;;
 esac
 
