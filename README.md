@@ -16,7 +16,7 @@ to copy this to `/etc`, run (while in clone dir)
 ```
 sudo cp -r etc/* /etc
 ```
-this directory has `etc/default/grub`, `mkinitcpio.conf`, and a getty login config.
+this directory has `etc/default/grub`, `mkinitcpio.conf`, and a getty login dropin file.
 
 now run the `hibernator` script (if you have swap set up.)
 
