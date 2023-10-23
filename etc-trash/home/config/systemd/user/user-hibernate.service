@@ -1,0 +1,8 @@
+[Unit]
+Description=Disable lid switch on hibernate start
+
+[Service]
+ExecStart=
+
+[Install]
+Wants=suspend.target
