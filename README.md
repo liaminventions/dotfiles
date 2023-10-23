@@ -36,6 +36,12 @@ and reboot.
 
 # NOTES
 
+## usr
+
+there is a `usr` directory here aswell. this has a script (`lidswitch.sh`) in it that re-enables the lid switch after hibernating
+
+this fixes an issue where systemd suspends instead of hibernating if you close the lid right before `systemctl hibernate` is ran (in `~/.config/hypr/scripts/hibernate`) 
+
 ## waybar fonts
 
 `ttf-font-awesome` and `ttf-roboto-mono` are needed for waybar to show correctly.

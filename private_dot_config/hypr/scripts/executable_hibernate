@@ -1,4 +1,5 @@
 #!/bin/bash
 ~/.config/hypr/scripts/lock 
 sleep 2
+rm ~/.cache/power/suspend.lock
 systemctl hibernate 
