@@ -1,2 +1,2 @@
 #!/bin/bash
-cmus-discord-rpc>/dev/null & cmus
+cmus-discord-rpc 2>/dev/null & cmus
