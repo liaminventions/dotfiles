@@ -9,6 +9,7 @@ TEXT_REPLACE_REGEX = (
     #("\\b" "data type" "\\b", "data-type"),
     #("\\b" "copy on write" "\\b", "copy-on-write"),
     #("\\b" "key word" "\\b", "keyword"),
+    ("\\b" "okay" "\\b", "ok"),
 )
 TEXT_REPLACE_REGEX = tuple(
     (re.compile(match), replacement)
