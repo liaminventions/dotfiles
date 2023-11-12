@@ -1,0 +1,12 @@
+function down(){
+  for i in `seq 5`; do light -U 1% && sleep 0.02; done
+}
+function up(){
+  for i in `seq 5`; do light -A 1% && sleep 0.02; done
+}
+
+case "$1" in
+  "down") down;;
+  "up") up;;
+  *) echo "unknown command";;
+esac
