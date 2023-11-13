@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=arch-apple
+Description=arch but apple- og by Nilotpal Biswas J
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/arch-apple
+ScriptFile=/usr/share/plymouth/themes/arch-apple/arch-apple.script
