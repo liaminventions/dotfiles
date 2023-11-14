@@ -11,4 +11,8 @@ elif [ $1 == "disp" ]; then
   #hyprctl keyword monitor "eDP-1,preferred,auto,1"
   sleep 1
   systemctl --user restart xdg-desktop-portal-hyprland.service
+elif [ $1 == "both" ]; then
+  hyprctl keyword monitor "HDMI-A-1,disable"
+  hyprctl keyword monitor "eDP-1,preferred,auto,1"
+  hyprctl keyword monitor "HDMI-A-1,1920x1080@60.00,0x0,1" 
 fi
