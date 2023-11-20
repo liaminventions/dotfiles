@@ -15,8 +15,15 @@ $surface-red: #f87070;
   color: $fg;
   font-size: 100px;
   font-weight: bold;
+  //text-shadow: 1px 1px 2px $surface-grey, 16 16 1em black, 0 0 0.2em black;
 }
 
+.weather {
+  border-radius: 25px;
+  background-color: $bg;
+  padding-right: 15px;
+  padding-left: 5px;
+}
 //.power {
 //  border-radius: 50px;
 //  border: 5px solid $gray;
@@ -42,7 +49,10 @@ $surface-red: #f87070;
 
 .powermenu {
   font-size: 2.5em;
- 
+  background-color: $bg;
+  padding-right: 5px;
+  border-radius: 15px;
+  
   button {
     padding: 0.4em;
     border-radius: 0.5em;
