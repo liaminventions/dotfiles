@@ -12,6 +12,8 @@
 
 #while [ ! -f /run/udev/data/+drm:card0-eDP-1 ] ; do echo "waiting for drm" && sleep 0.2 ; done
 
+export QT_QPA_PLATFORMTHEME=kde
+
 export USER=waverider
 [ -z $TERM ] && export TERM=linux
 [ -z $LOGNAME ] && export LOGNAME=$USER
