@@ -1,6 +1,12 @@
 #!/bin/bash
-~/.config/hypr/scripts/lock 
-rm ~/.cache/power/suspend.lock
-#systemd-inhibit --what=handle-lid-switch sleep 3s &
-sleep 2
-systemctl hibernate 
+if [ -f ~/.cache/power/alarm.lock ] 
+then
+  rm ~/.cache/power/suspend.lock
+  ~/wakeup.sh 
+else
+  ~/.config/hypr/scripts/lock 
+  rm ~/.cache/power/suspend.lock
+  #systemd-inhibit --what=handle-lid-switch sleep 3s &
+  sleep 2
+  systemctl hibernate 
+fi
