@@ -145,9 +145,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.0080997"
-     inkscape:cx="156.36674"
-     inkscape:cy="206.91203"
+     inkscape:zoom="8.0323988"
+     inkscape:cx="350.7047"
+     inkscape:cy="235.73282"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:grid-points="true"
@@ -3409,7 +3409,7 @@
        style="font-weight:bold;font-size:6px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#ff7f2a;fill-opacity:0.792157"><tspan
          x="203.1485"
          y="233.41238"
-         id="tspan51">fur-cli</tspan></text><text
+         id="tspan52">fur-cli</tspan></text><text
        xml:space="preserve"
        style="font-weight:bold;font-size:15.581px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;text-anchor:end;fill:#666666;fill-opacity:0.792157;stroke-width:2.33715"
        x="1135.0647"
@@ -3439,4 +3439,14 @@
          x="766.013"
          y="-31.469051"
          style="stroke-width:2.33715"
-         id="tspan50">cemuhook</tspan></text></g></svg>
+         id="tspan50">cemuhook</tspan></text><text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:18.6972px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;text-anchor:end;fill:#ff00ff;fill-opacity:0.792157;stroke-width:2.33715"
+       x="935.46967"
+       y="-50.821945"
+       id="text49"><tspan
+         sodipodi:role="line"
+         id="tspan49"
+         x="935.46967"
+         y="-50.821945"
+         style="stroke-width:2.33715">lunar</tspan></text></g></svg>
