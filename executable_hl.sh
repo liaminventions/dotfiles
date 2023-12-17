@@ -12,8 +12,11 @@
 
 #while [ ! -f /run/udev/data/+drm:card0-eDP-1 ] ; do echo "waiting for drm" && sleep 0.2 ; done
 
-export QT_QPA_PLATFORM=wayland-egl
+#export QT_QPA_PLATFORM=wayland-egl
+unset QT_QPA_PLATFORM
 export QT_QPA_PLATFORMTHEME=kde
+
+#export DISPLAY=:0
 
 export USER=waverider
 [ -z $TERM ] && export TERM=linux
