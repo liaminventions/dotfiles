@@ -6,12 +6,14 @@ function refresh() {
   eww -c ~/.config/eww/bg open bot & disown;
 }
 
+export HDMIRES=1920x1200@60.00
+
 if [ $1 = "mirror" ]; then
   hyprctl keyword monitor "eDP-1,preferred,auto,1"
-  hyprctl keyword monitor "HDMI-A-1,1920x1080@60.00,0x0,1,mirror,eDP-1"
+  hyprctl keyword monitor "HDMI-A-1,$HDMIRES,0x0,1,mirror,eDP-1"
   refresh
 elif [ $1 == "hdmi" ]; then
-  hyprctl keyword monitor "HDMI-A-1,1920x1080@60.00,0x0,1"
+  hyprctl keyword monitor "HDMI-A-1,$HDMIRES,0x0,1"
   hyprctl keyword monitor "eDP-1,disable"
   refresh
 elif [ $1 == "disp" ]; then
@@ -24,6 +26,6 @@ elif [ $1 == "disp" ]; then
 elif [ $1 == "both" ]; then
   hyprctl keyword monitor "HDMI-A-1,disable"
   hyprctl keyword monitor "eDP-1,preferred,auto,1"
-  hyprctl keyword monitor "HDMI-A-1,1920x1080@60.00,0x0,1" 
+  hyprctl keyword monitor "HDMI-A-1,$HDMIRES,0x0,1" 
   refresh
 fi
