@@ -1,0 +1,11 @@
+# NOTE: ONLY SUPPORTS TEXT
+
+set -ex
+#set -o pipefail
+WINDOW_ID=$( hyprctl activewindow | grep Window | awk '{print $2}' )
+TEXT=$( cliphist list | wofi --dmenu | cliphist decode )
+wl-copy $TEXT 
+#sleep 0.1
+hyprctl dispatch focuswindow $WINDOW_ID | wlrctl keyboard type $TEXT
+#wtype -M ctrl shift -P v -m ctrl
+#| wl-paste | wl-copy -c
