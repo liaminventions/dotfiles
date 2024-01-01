@@ -25,7 +25,7 @@
       (box :spacing 25 :class "weather" :space-evenly false
         :valign "end" :halign "start"
         (weather)
-        (_battery :status {EWW_BATTERY.BAT0.status}
+        (battery :status {EWW_BATTERY.BAT0.status}
                   :battery {EWW_BATTERY.BAT0.capacity}
                   :charge "󰂄" :one "󱟢" :two "󰂂" :three "󰂀" :four "󰁾"
                   :five "󰁼" :six "󰁺" :seven "󰂃"))
@@ -149,7 +149,7 @@
 
 (defpoll weather :interval "30m" :timeout "5s" "../iceberg/menu/scripts/weather") 
 
-(defwidget _battery [battery status one two three
+(defwidget battery [battery status one two three
                     four five six seven charge]
   (box :class "bat-box" :space-evenly false :spacing 8
     (label :text {status == 'Charging' ? charge :
