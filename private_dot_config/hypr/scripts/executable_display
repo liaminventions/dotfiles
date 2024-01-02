@@ -7,6 +7,7 @@ function refresh() {
 }
 
 export HDMIRES=1920x1800@60.00
+#export HDMIRES=640x480@60.00
 
 if [ $1 = "mirror" ]; then
   hyprctl keyword monitor "eDP-1,preferred,auto,1"
