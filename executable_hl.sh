@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #set -ex
 #plymouth deactivate
 #sleep .3
@@ -11,6 +11,9 @@
 # || sudo systemctl start iwd &
 
 #while [ ! -f /run/udev/data/+drm:card0-eDP-1 ] ; do echo "waiting for drm" && sleep 0.2 ; done
+
+# set this variable to the resolution of the hdmi screen
+#export HDMIRES=1920x1200@60.00
 
 #export QT_QPA_PLATFORM=wayland-egl
 unset QT_QPA_PLATFORM
@@ -41,4 +44,4 @@ export HYPRLAND_LOG_WLR=1
 #[ ! -f /run/udev/data/+drm:card0-eDP-1 ] \
 # && echo "Hyprland needs drm, bailing out" && exit -1
 
-exec Hyprland > .hyprland.log.txt 2> .hyprland.err.txt
+exec Hyprland > .hyprland.out.txt 2> .hyprland.err.txt &>> .hyprland.log.txt 
