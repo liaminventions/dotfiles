@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function down(){
   for i in `seq 5`; do light -U 1% && sleep 0.02; done
 }

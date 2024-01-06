@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # NAME
 #     audio - Increase/decrease/mute volume using PulseAudio pactl
 # SYNOPSIS 
@@ -9,7 +9,7 @@ step=5   # number of percentage points to increase/decrease volume
 max=100  # do not increase volume above this percentage
 
 # Prints current volume percentage, e.g. `60`, `95`, `20`, etc.
-function get_current_volume() {
+get_current_volume() {
   pactl get-sink-volume @DEFAULT_SINK@ | awk -F '/' '{print $2}' | grep -o '[0-9]\+'
 }
 

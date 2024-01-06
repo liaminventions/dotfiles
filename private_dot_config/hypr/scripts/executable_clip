@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/sh 
 set -ex
 url=$(wl-paste)
 cd ~/dot/dot\ v
