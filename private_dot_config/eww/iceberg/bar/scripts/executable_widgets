@@ -4,7 +4,7 @@ eww_menu="eww -c $HOME/.config/eww/iceberg/menu"
 CACHE_DIR="$HOME/.cache/eww"
 focusmon=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .id')
 
-function toggle_sys0() {
+toggle_sys0() {
 	if [ -f "$CACHE_DIR/sys-menu$focusmon.lock" ];then
 		rm "$CACHE_DIR/sys-menu$focusmon.lock"
 		$eww_menu update system-menu=false
@@ -18,7 +18,7 @@ function toggle_sys0() {
 	fi
 }
 
-function toggle_sys1() {
+toggle_sys1() {
 	if [ -f "$CACHE_DIR/sys-menu$focusmon.lock" ];then
 		rm "$CACHE_DIR/sys-menu$focusmon.lock"
 		$eww_menu update system-menu=false
@@ -32,7 +32,7 @@ function toggle_sys1() {
 	fi
 }
 
-function toggle_time0() {
+toggle_time0() {
 	if [ -f "$CACHE_DIR/time-menu.lock" ];then
 		rm "$CACHE_DIR/time-menu.lock"
 		$eww_menu update time-reveal=false
@@ -48,7 +48,7 @@ function toggle_time0() {
 	fi
 }
 
-function toggle_time1() {
+toggle_time1() {
 	if [ -f "$CACHE_DIR/time-menu1.lock" ];then
 		rm "$CACHE_DIR/time-menu1.lock"
 		$eww_menu update time-reveal=false
@@ -64,7 +64,7 @@ function toggle_time1() {
 	fi
 }
 
-function toggle_clip() {
+toggle_clip() {
 	if [ -f "$CACHE_DIR/clipboard$focusmon.lock" ];then
 		rm "$CACHE_DIR/clipboard$focusmon.lock"
 		# $eww_menu close unfocus
