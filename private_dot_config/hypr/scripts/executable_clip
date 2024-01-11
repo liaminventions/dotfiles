@@ -2,4 +2,4 @@
 set -ex
 url=$(wl-paste)
 cd ~/dot/dot\ v
-yt-dlp $url
+yt-dlp -vU $url
