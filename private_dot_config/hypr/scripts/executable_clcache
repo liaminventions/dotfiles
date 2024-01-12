@@ -1,0 +1,17 @@
+#!/bin/bash
+
+RED='\033[1;31m'
+NC='\033[0m'
+BOLD='\033[1m'
+BLUE='\033[1;34m'
+echo -e "Clearing ${RED}all ${BLUE}AUR packages${NC} from paru cache.${BOLD}"
+read -p "Are you sure you would like to continue? [Y/n] " -n 1 -r yn
+read -s -t 3 -n 3 key
+echo -e "${NC}"
+echo
+if [ $${key} == $'\0A' ]; then
+  if [[ ${yn} =~ ^[Yy]$ ]]
+  then
+     rm -r ~/.cache/paru/clone/*
+  fi
+fi
