@@ -2,7 +2,7 @@
 # NAME
 #     audio - Increase/decrease/mute volume using PulseAudio pactl
 # SYNOPSIS 
-#     audio <vol-up|vol-down|mute|mic-mute>
+#     audio <vol-up|vol-down|mute|force-mute|mic-mute>
 # Location: ~/.config/hypr/scripts/audio
 
 step=5   # number of percentage points to increase/decrease volume
@@ -26,9 +26,12 @@ elif [ $1 == "vol-down" ]; then
 elif [ $1 == "mute" ]; then
   pactl set-sink-mute @DEFAULT_SINK@ toggle
   pactl set-sink-volume @DEFAULT_SINK@ "0%"
+elif [ $1 == "force-mute" ]; then
+  pactl set-sink-mute @DEFAULT_SINK@ true
+  pactl set-sink-volume @DEFAULT_SINK@ "0%"
 elif [ $1 == "mic-mute" ]; then
   pactl set-source-mute @DEFAULT_SOURCE@ toggle
 else
   echo "Unrecognized parameter: ${1}"
-  echo "Usage should be: volume <vol-up|vol-down|mute|mic-mute>"
+  echo "Usage should be: volume <vol-up|vol-down|mute|force-mute|mic-mute>"
 fi
