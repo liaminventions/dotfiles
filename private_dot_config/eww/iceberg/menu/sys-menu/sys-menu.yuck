@@ -27,11 +27,13 @@
          :valign "center"
       (label :class "user-name" :halign "start" :text uname)
       (label :class "user-uptime" :halign "start" :text uptime-val)
-      (label :class "user-pkgs" :halign "start" :text pkgs-val)))) 
+      (label :class "user-pkgs" :halign "start" :text pkgs-val)
+      (label :class "user-pkgs-flatpak" :halign "start" :text pkgs-val-flatpak)))) 
 
 (defpoll uname :interval "1h" "echo $USER")
 (defpoll uptime-val :interval "30s" "uptime -p")
 (defpoll pkgs-val :interval "2m" "pacman -Q | wc -l | tail -1 | sed 's/$/ packages installed (pacman)/'")
+(defpoll pkgs-val-flatpak :interval "2m" "flatpak list -a | wc -l | tail -1 | sed 's/$/ packages installed (flatpak)/'")
 
 (defwidget panel[]
   (box :class "panel"
