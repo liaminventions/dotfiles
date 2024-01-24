@@ -19,6 +19,8 @@
 unset QT_QPA_PLATFORM
 export QT_QPA_PLATFORMTHEME=kde
 
+export GTK_THEME=Adwaita:dark
+
 #export DISPLAY=:0
 
 export USER=waverider
@@ -33,6 +35,8 @@ export USER=waverider
 [ -z $XDG_VTNR ] && export XDG_VTNR=1
 [ -z $XDG_RUNTIME_DIR ] && export XDG_RUNTIME_DIR=/run/user/1000
 [ -z $DBUS_SESSION_BUS_ADDRESS ] && export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+#export JAVA_HOME=/usr/lib/jvm/java-21-jdk
 
 export HYPRLAND_LOG_WLR=1
 #export XCURSOR_SIZE=24
