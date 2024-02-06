@@ -1,10 +1,10 @@
 #!/bin/bash
 
 function down(){
-  for i in `seq 5`; do light -U 1% && sleep 0.02; done
+  for i in `seq 5`; do brightnessctl s 1%- -q && sleep 0.02; done
 }
 function up(){
-  for i in `seq 5`; do light -A 1% && sleep 0.02; done
+  for i in `seq 5`; do brightnessctl s +1% -q && sleep 0.02; done
 }
 
 case "$1" in

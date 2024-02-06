@@ -6,7 +6,7 @@ brightnessctl s 0
 CURRENT=0
 sleep 1.5
 while [ $CURRENT -le $MAX ]; do
-  brightnessctl s $CURRENT ;
+  brightnessctl s $CURRENT -q;
   CURRENT=$(($CURRENT + 200)) ;
 done
 sleep 1
