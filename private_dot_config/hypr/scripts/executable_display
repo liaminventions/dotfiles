@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -ex
+
 function refresh() {
   swww kill
   killall eww
@@ -6,7 +10,7 @@ function refresh() {
   eww -c ~/.config/eww/bg open bot & disown;
 }
 
-export HDMIRES=1920x1800@60.00
+export HDMIRES=1920x1080@60.00
 #export HDMIRES=640x480@60.00
 
 if [ $1 = "mirror" ]; then
