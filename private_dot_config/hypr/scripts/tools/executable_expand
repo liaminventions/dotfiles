@@ -20,6 +20,7 @@ do
             fi
             echo $index > $TEMP
             $scripts/wall "${files[$index]}"
+            echo "${files[$index]}" > $hypr/current_wall
             exit 0
             ;;
         "arrow-icon")

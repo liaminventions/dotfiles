@@ -93,4 +93,4 @@
 .config/sigrok/**
 .config/stella/**
 .config/transmission/**
-
+.config/hypr/current_wall

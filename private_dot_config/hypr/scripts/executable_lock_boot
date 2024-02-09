@@ -1,7 +1,7 @@
 #!/bin/sh
 gpg-connect-agent --no-autostart reloadagent /bye
 swaylock \
--i ~/.config/hypr/bg/a-neon-city-4m-1920x1080.jpg \
+-i $(cat ~/.config/hypr/current_wall) \
 --indicator \
 --clock \
 --inside-wrong-color f38ba8  \
