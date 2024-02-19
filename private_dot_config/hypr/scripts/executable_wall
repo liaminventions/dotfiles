@@ -1,4 +1,5 @@
 #!/usr/bin/bash
 #swww init
-swww img $1 --transition-type grow --transition-pos "$(hyprctl cursorpos)" --transition-duration 2
+swww img $1 --transition-duration 1
+#--transition-type grow --transition-pos "$(hyprctl cursorpos)" --transition-duration 2
 
