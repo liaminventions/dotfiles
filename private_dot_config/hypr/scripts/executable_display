@@ -3,13 +3,15 @@
 #set -ex
 
 function refresh() {
-  #swww kill
+  swww kill &
   killall swww-daemon
   killall eww
+  sleep 0.5
+  killall swww-daemon
+  sleep 0.5
+  swww init
   eww -c ~/.config/eww/bg open clock & disown;
   eww -c ~/.config/eww/bg open bot & disown;
-  sleep 1
-  swww init
 }
 
 export HDMIRES=1920x1080@60.00
