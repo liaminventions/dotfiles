@@ -11,11 +11,11 @@ trap "killall paplay; exit" TERM
 # checks if the focused window is on-topic to the current focus activity
 
 # activity whitelist
-chem_whitelist="Brave qalc Kalzium BASS cmus kitten Cavasik cava Open chem math"
-math_whitelist="Brave qalc BASS cmus kitten Cavasik cava Open math"
+chem_whitelist="Brave qalc Kalzium BASS kitten Cavasik cava Open chem math"
+math_whitelist="Brave qalc BASS kitten Cavasik cava Open math"
 
-chem_class_whitelist="nemo bassmod org.gnome.Loupe"
-math_class_whitelist="nemo bassmod org.gnome.Loupe"
+chem_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity"
+math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity"
 
 hits=1
 
