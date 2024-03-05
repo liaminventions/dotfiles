@@ -141,7 +141,7 @@
     :hexpand true
     :spacing 15 
     (button :class "act-chem act-chem-${act-chem.state}" :onclick "./scripts/sys toggle-chem" :tooltip "chemestry" "  ")
-    (button :class "act-math act-math-${act-math.state}" :onclick "./scripts/sys toggle-math" :tooltip "math" " 󰍘 ")))
+    (button :class "act-math act-math-${act-math.state}" :onclick "./scripts/sys toggle-math" :tooltip "math" "  ")))
 
 (defwindow sys-menu0 
    :monitor 0
