@@ -19,70 +19,77 @@ math_class_whitelist="nemo bassmod org.gnome.Loupe"
 
 hits=1
 
-while sleep 0.5; do
+while sleep 0.25; do
 
   if [ -f "$CACHE_DIR/chem.lock" ] && [ -f "$CACHE_DIR/math.lock" ]; then
     exit
   fi
 
-  activewindow=$(hyprctl --batch activewindow)
-  window=$(echo $activewindow | grep "initialTitle")
-  windowclass=$(echo $activewindow | grep "class")
-
   prevhit=$hits
 
+  activewindow=$(hyprctl --batch activewindow)
+  window=$(echo "$activewindow" | grep "initialTitle")
+  windowclass=$(echo "$activewindow" | grep "class")
+
   if [ ! -f "$CACHE_DIR/chem.lock" ]; then
-      if [ "$window" != "" ]; then
-        for word in $chem_whitelist; do
-          if [[ "$window" == *"$word"* ]]; then
+    if [ "$window" != "" ]; then
+      for word in $chem_whitelist; do
+        if [[ "$window" == *"$word"* ]]; then
+          hits=1
+          break
+        else
+          hits=0
+        fi
+      done
+      if [ $hits != 1 ]; then
+        for word2 in $chem_class_whitelist; do
+          if [[ "$windowclass" == *"$word2"* ]]; then
             hits=1
             break
           else
             hits=0
           fi
         done
-        for word in $chem_class_whitelist; do
-          if [[ "$windowclass" == *"$word"* ]]; then
-            hits=1
-            break
-          else
-            hits=0
-          fi
-        done
-      else
-        hits=1
       fi
+    else
+      hits=1
+    fi
   fi
 
   if [ ! -f "$CACHE_DIR/math.lock" ]; then
-      if [ "$window" != "" ]; then
-        for word in $math_whitelist; do
-          if [[ "$window" == *"$word"* ]]; then
+    if [ "$window" != "" ]; then
+      for word in $math_whitelist; do
+        if [[ "$window" == *"$word"* ]]; then
+          hits=1
+          break
+        else
+          hits=0
+        fi
+      done
+      if [ $hits != 1 ]; then
+        for word2 in $math_class_whitelist; do
+          if [[ "$windowclass" == *"$word2"* ]]; then
             hits=1
             break
           else
             hits=0
           fi
         done
-        for word in $math_class_whitelist; do
-          if [[ "$windowclass" == *"$word"* ]]; then
-            hits=1
-            break
-          else
-            hits=0
-          fi
-        done
-      else
-        hits=1
       fi
+    else
+      hits=1
+    fi
   fi
+
   if [ $hits == 0 ] && [ $prevhit == 0 ]; then
     if ! pgrep -x "paplay" > /dev/null; then
       paplay ~/.config/hypr/sounds/sponge.flac &
     fi
     hits=1
   elif [ $hits == 1 ]; then
-    killall paplay
+    if pgrep -x "paplay" > /dev/null; then
+      killall paplay
+    fi
     hits=0
   fi
 done
