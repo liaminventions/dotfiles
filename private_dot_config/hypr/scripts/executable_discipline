@@ -4,6 +4,8 @@
 
 CACHE_DIR="/home/waverider/.cache/eww"
 
+trap "killall paplay; exit" TERM
+
 # -- DISCIPLINE --
 #
 # checks if the focused window is on-topic to the current focus activity
