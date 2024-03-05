@@ -13,8 +13,8 @@ trap "killall paplay; exit" TERM
 chem_whitelist="Brave qalc Kalzium BASS kitten Cavasik cava Open chem math"
 math_whitelist="Brave qalc BASS kitten Cavasik cava Open math"
 
-chem_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager"
-math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager"
+chem_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave"
+math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave"
 
 hits=1
 
