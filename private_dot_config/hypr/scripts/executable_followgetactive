@@ -1,0 +1,10 @@
+#!/bin/bash
+status=$(hyprctl --batch activewindow | grep "Window")
+echo $status
+while sleep 0.5; do
+  ns=$(hyprctl --batch activewindow | grep "Window")
+  if [ "$status" != "$ns" ];then
+		status=$ns
+    echo $status
+  fi
+done
