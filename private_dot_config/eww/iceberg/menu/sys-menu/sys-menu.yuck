@@ -11,7 +11,8 @@
     (panel)
     (media)
     (sliders)
-    (powermenu))))
+    (powermenu)
+    (activitymenu))))
 (defvar system-menu false)
 
 (defwidget user[] 
@@ -20,7 +21,7 @@
        :orientation "h"
        :hexpand true
        :spacing 15
-    (box :class "user-pfp" :halign "start" :valign "center" :style "background-image: url('assets/waverider.png');") 
+    (box :class "user-pfp" :halign "start" :valign "center" :style "background-image: url('assets/waverider2.png');")
     (box :class "user-details"
          :orientation "v"
          :space-evenly false
@@ -74,6 +75,8 @@
 (deflisten dnd "scripts/sys dnd")
 (deflisten night "scripts/sys night")
 (deflisten blue "scripts/sys blue")
+(deflisten act-chem "scripts/sys act-chem")
+(deflisten act-math "scripts/sys act-math")
 
 (defwidget media[]
   (box :class "media"
@@ -131,6 +134,14 @@
     (button :class "power-hibernate" :onclick "../common/scripts/power hibernate" :tooltip "Hibernate" " 󰤄 ")
     (button :class "power-reboot" :onclick "../common/scripts/power reboot" :tooltip "Restart" "  ")
     (button :class "power-shutdown" :onclick "../common/scripts/power shutdown" :tooltip "Shutdown" "  ")))
+
+(defwidget activitymenu[]
+  (box :class "activitymenu"
+    :orientation "h"
+    :hexpand true
+    :spacing 15 
+    (button :class "act-chem act-chem-${act-chem.state}" :onclick "./scripts/sys toggle-chem" :tooltip "chemestry" "  ")
+    (button :class "act-math act-math-${act-math.state}" :onclick "./scripts/sys toggle-math" :tooltip "math" " 󰍘 ")))
 
 (defwindow sys-menu0 
    :monitor 0
