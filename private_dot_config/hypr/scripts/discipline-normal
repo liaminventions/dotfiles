@@ -1,0 +1,59 @@
+#!/bin/bash
+
+#set -ex
+
+CACHE_DIR="/home/waverider/.cache/eww"
+
+trap "killall paplay; exit" TERM
+
+# -- DISCIPLINE --
+#
+# checks if the focused window is on-topic to the current focus activity
+
+# activity whitelist
+chem_whitelist="Brave qalc Kalzium modtest cmus kitten Cavasik cava"
+math_whitelist="Brave qalc modtest cmus kitten Cavasik cava"
+
+hits=1
+
+while sleep 0.5; do
+
+  if [ -f "$CACHE_DIR/chem.lock" ] && [ -f "$CACHE_DIR/math.lock" ]; then
+    exit
+  fi
+
+  if [ ! -f "$CACHE_DIR/chem.lock" ]; then
+      window=$(hyprctl --batch activewindow | grep "initialTitle")
+      if [ "$window" != "" ]; then
+        for word in $chem_whitelist; do
+          if [[ "$window" == *"$word"* ]]; then
+            hits=1
+            break
+          else
+            hits=0
+          fi
+        done
+      fi
+  fi
+
+  if [ ! -f "$CACHE_DIR/math.lock" ]; then
+      window=$(hyprctl --batch activewindow | grep "initialTitle")
+      if [ "$window" != "" ]; then
+        for word in $math_whitelist; do
+          if [[ "$window" == *"$word"* ]]; then
+            hits=1
+            break
+          else
+            hits=0
+          fi
+        done
+      fi
+  fi
+
+  if [ $hits != 1 ]; then
+    paplay /usr/share/sounds/freedesktop/stereo/dialog-error.oga
+    hits=1
+  fi
+done
+
+
