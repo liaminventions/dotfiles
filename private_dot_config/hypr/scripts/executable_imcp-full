@@ -1,10 +1,10 @@
-CACHE_DIR="~/.cache/eww"
-if ! [ -f "$CACHE_DIR/chem.lock" ]; then
-  FILE=/home/waverider/Pictures/Screenshots/chem/"$(date +%Y%m%d-%H%M%S)".png
-elif ! [ -f "$CACHE_DIR/math.lock" ]; then
-  FILE=/home/waverider/Pictures/Screenshots/math/"$(date +%Y%m%d-%H%M%S)".png
+date=$(date +%Y%m%d-%H%M%S)
+if [ ! -f ~/.cache/eww/chem.lock ]; then
+  FILE=/home/waverider/Pictures/Screenshots/chem/"$date".png
+elif [ ! -f ~/.cache/eww/math.lock ]; then
+  FILE=/home/waverider/Pictures/Screenshots/math/"$date".png
 else
-  FILE=/home/waverider/Pictures/Screenshots/"$(date +%Y%m%d-%H%M%S)".png
+  FILE=/home/waverider/Pictures/Screenshots/"$date".png
 fi
 grim $FILE && wl-copy < $FILE
 #grimblast --freeze copysave screen $FILE
