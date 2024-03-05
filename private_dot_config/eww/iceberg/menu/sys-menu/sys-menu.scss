@@ -371,22 +371,27 @@ scale.bright-scale trough slider {
 	}
 
 	button:hover {
-	 	background-color: $mint;
-		color: $dark-gray;
+	 	//background-color: $blue;  
+    border: 1px solid $gray;
+    border-radius: 8px;
+		//color: $dark-gray;
 	}
 
 	.act-math-off, .act-chem-off {
 		background-color: $dark-gray;
+    border: 1px solid $dark-gray;
 		border-radius: 8px;
 	}
 
 	.act-math-on {
 		background-color: $mint;
+    border: 1px solid $mint;
 		color: $dark-gray;
 	}
 
 	.act-chem-on {
 		background-color: $mint;
+    border: 1px solid $mint;
 		color: $dark-gray;
 	}	
 
