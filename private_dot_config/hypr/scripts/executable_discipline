@@ -3,7 +3,7 @@
 
 CACHE_DIR="/home/waverider/.cache/eww"
 
-trap "killall paplay; exit" TERM
+trap "killall paplay; killall breaktimer; exit" TERM
 
 # -- DISCIPLINE --
 #
@@ -13,10 +13,17 @@ trap "killall paplay; exit" TERM
 chem_whitelist="Brave qalc Kalzium BASS kitten Cavasik cava Open chem math"
 math_whitelist="Brave qalc BASS kitten Cavasik cava Open math"
 
-chem_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave"
-math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave"
+# window class whitelist
+chem_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview"
+math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview"
 
 hits=1
+
+if [ -f "$CACHE_DIR/chem.lock" ] && [ -f "$CACHE_DIR/math.lock" ]; then
+  exit
+fi
+
+/opt/BreakTimer/breaktimer & disown 
 
 while sleep 0.25; do
 
