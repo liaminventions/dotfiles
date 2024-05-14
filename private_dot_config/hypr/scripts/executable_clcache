@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 RED='\033[1;31m'
 NC='\033[0m'
 BOLD='\033[1m'
@@ -12,6 +14,6 @@ echo
 if [ $${key} == $'\0A' ]; then
   if [[ ${yn} =~ ^[Yy]$ ]]
   then
-     rm -r ~/.cache/paru/clone/*
+     /usr/bin/rm -r ~/.cache/paru/clone/* --force
   fi
 fi
