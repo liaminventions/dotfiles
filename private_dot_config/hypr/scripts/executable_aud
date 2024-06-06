@@ -2,4 +2,4 @@
 set -ex
 url=$(wl-paste)
 cd ~/Music
-yt-dlp $url -x --audio-format flac
+yt-dlp $url -x --no-playlist --audio-format flac

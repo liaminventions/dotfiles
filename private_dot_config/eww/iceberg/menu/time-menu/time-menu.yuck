@@ -139,16 +139,16 @@
 
     
 ;(deflisten notifications-cards "~/.local/.scripts/notifs subscribe")
-(defwindow time-menu0 
-  :monitor 0
-  :geometry (geometry :x "-10px" :y "5px" :width "584px" :height "1px" :anchor "top right")
-  :windowtype "dock"
-  :wm-ignore false
-  (time-menu-main))
-
-(defwindow time-menu1 
-  :monitor 1
-  :geometry (geometry :x "-10px" :y "5px" :width "584px" :height "1px" :anchor "top right")
-  :windowtype "dock"
-  :wm-ignore false
-  (time-menu-main))
+;(defwindow time-menu0 
+;  :monitor 0
+;  :geometry (geometry :x "-10px" :y "5px" :width "584px" :height "1px" :anchor "top right")
+;  :windowtype "dock"
+;  :wm-ignore false
+;  (time-menu-main))
+;
+;(defwindow time-menu1 
+;  :monitor 1
+;  :geometry (geometry :x "-10px" :y "5px" :width "584px" :height "1px" :anchor "top right")
+;  :windowtype "dock"
+;  :wm-ignore false
+;  (time-menu-main))

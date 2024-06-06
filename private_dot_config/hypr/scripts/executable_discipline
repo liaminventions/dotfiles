@@ -14,8 +14,8 @@ chem_whitelist="Brave qalc Kalzium BASS kitten Cavasik cava Open chem math"
 math_whitelist="Brave qalc BASS kitten Cavasik cava Open math"
 
 # window class whitelist
-chem_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview"
-math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview"
+chem_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview pinta vlc BreakTimer"
+math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview pinta vlc BreakTimer qalc"
 
 hits=1
 
