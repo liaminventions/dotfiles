@@ -1,0 +1,8 @@
+#!/bin/sh
+mkdir ~/.cache/power; /usr/bin/rm ~/.cache/power/*; touch ~/.cache/power/debloat.lock
+mkdir ~/.cache/joycon
+touch ~/.cache/voice/voice.lock #make sure that voice dictation is disabled on boot
+/usr/bin/rm ~/.cache/eww/night.lock
+touch ~/.cache/power/suspend.lock
+touch ~/.cache/power/night.lock
+touch ~/.cache/eww/chem.lock; touch ~/.cache/eww/math.lock
