@@ -1,0 +1,5 @@
+type            = process
+command         = /usr/bin/gnome-keyring-daemon --foreground --components="pkcs11,secrets" --control-directory=%t/keyring
+smooth-recovery = true
+logfile         = /var/log/dinit/gnome-keyring-daemon.log
+after           = login.target

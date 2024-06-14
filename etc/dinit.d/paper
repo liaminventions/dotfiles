@@ -1,0 +1,5 @@
+type		= process
+command		= /usr/bin/java -jar /home/waverider/papermc/paper-1.19.4-550.jar --nogui 2>&1
+logfile		= /var/log/dinit/papermc.log
+working-dir	= /home/waverider/papermc/
+depends-on	= network
