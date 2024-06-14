@@ -325,6 +325,7 @@ bindswitch lid:on exec ~/.config/sway/scripts/suspend-nosystemd lid
 #bindswitch lid:off exec
 
 bindsym $ctrl+XF86PowerOff exec sudo ~/.config/sway/scripts/power.sh reboot
+bindsym $ctrl+XF86Explorer exec sudo ~/.config/sway/scripts/power.sh reboot
 bindsym $super+XF86Explorer exec ~/.config/sway/scripts/hibernate-nosystemd
 
 bindsym Scroll_Lock exec ~/.config/sway/scripts/hibernate-nosystemd
