@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 TEMP=/tmp/current_wall
 
-files=(~/.config/hypr/bg/*)
+files=(~/.config/sway/bg/*)
 
-hypr=~/.config/hypr
-scripts=$hypr/scripts
+sway=~/.config/sway
+scripts=$sway/scripts
 
 cooldown=0.1
 
@@ -20,7 +20,7 @@ do
             fi
             echo $index > $TEMP
             $scripts/wall "${files[$index]}"
-            echo "${files[$index]}" > $hypr/current_wall
+            echo "${files[$index]}" > $sway/current_wall
             exit 0
             ;;
         "arrow-icon")
