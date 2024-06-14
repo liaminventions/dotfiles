@@ -6,6 +6,7 @@ exec ~/.config/sway/scripts/lock_boot
 exec ~/.config/sway/scripts/pipewire-pulse.sh
 exec ~/.config/sway/scripts/cachesetup
 exec ~/.config/sway/scripts/audio force-mute
+exec dunst
 
 exec wl-paste --watch cliphist store
 exec wl-clip-persist --clipboard regular --all-mime-type-regex '(?i)^(?!image/x-inkscape-svg).+'
@@ -340,9 +341,9 @@ bindsym XF86AudioPrev exec playerctl --player playerctld previous
 
 ### WAYBAR
 
-#bar {
-#  swaybar_command waybar
-#}
+bar {
+  swaybar_command waybar
+}
 
 
 
@@ -351,18 +352,18 @@ bindsym XF86AudioPrev exec playerctl --player playerctld previous
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%A %B %d %Y, %I:%M %p  '; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+#bar {
+#    position top
+#
+#    # When the status_command prints a new line to stdout, swaybar updates.
+#    # The default just shows the current date and time.
+#    status_command while date +'%A %B %d %Y, %I:%M %p  '; do sleep 1; done
+#
+#    colors {
+#        statusline #ffffff
+#        background #323232
+#        inactive_workspace #32323200 #32323200 #5c5c5c
+#    }
+#}
 
 include /etc/sway/config.d/*
