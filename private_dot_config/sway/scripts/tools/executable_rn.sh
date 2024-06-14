@@ -1,6 +1,7 @@
-chmod +x *
-for filename in executable_*; do 
-    [ -f "$filename" ] || continue
-    mv "$filename" "${filename//executable_/}"
+shopt -s globstar dotglob failglob
 
+for filename in ./**/executable_*; do 
+    [ -f "$filename" ] || continue
+    chmod +x "$filename"
+    mv "$filename" "${filename//executable_/}"
 done

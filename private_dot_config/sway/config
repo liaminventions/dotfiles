@@ -232,7 +232,7 @@ bindsym $super+s exec kitty -c ~/.config/kitty/mini.conf --class=qalc qalc
 bindsym $super+g exec kitty btop # or gotop
 bindsym $super+d exec nemo #export XDG_CURRENT_DESKTOP=KDE && dolphin
 #bindsym $super+$ctrl+Space  exec ./.config/eww/iceberg/bar/scripts/widgets toggle-sys1
-#bindsym $super+h exec kitty chezmoi edit .config/sway/config --apply
+bindsym $super+h exec zsh -c "kitty chezmoi edit .config/sway/config --apply"
 bindsym $super+Escape exec ~/.config/sway/scripts/suspend toggle
 #bindsym $super+o,      exec gnome-clocks
 bindsym $super+t exec ~/.config/sway/scripts/night
@@ -338,6 +338,15 @@ bindsym XF86AudioPlay exec playerctl --player playerctld play-pause
 bindsym XF86AudioNext exec playerctl --player playerctld next
 bindsym XF86AudioPrev exec playerctl --player playerctld previous
 
+### WAYBAR
+
+#bar {
+#  swaybar_command waybar
+#}
+
+
+
+### SWAYBAR
 #
 # Status Bar:
 #
