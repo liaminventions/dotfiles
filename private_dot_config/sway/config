@@ -207,7 +207,8 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $super+r mode "resize"
+#bindsym $super+r mode "resize"
+bindsym $super+r exec ~/.config/sway/scripts/pipewire-pulse.sh
 
 bindsym XF86AudioMute        exec bash -c "~/.config/sway/scripts/audio mute"
 bindsym XF86AudioRaiseVolume exec bash -c "~/.config/sway/scripts/audio vol-up"
