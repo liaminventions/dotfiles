@@ -11,7 +11,7 @@ exec dunst
 exec wl-paste --watch cliphist store
 exec wl-clip-persist --clipboard regular --all-mime-type-regex '(?i)^(?!image/x-inkscape-svg).+'
 
-exec wpa-cute -qt
+exec sh -c "sleep 5; wpa-cute -q -t"
 
 ### Variables
 #
@@ -41,7 +41,7 @@ for_window [app_id="qalc"] floating enable
 for_window [app_id="qalc"] border none
 for_window [app_id="qalc"] resize set 768 648
 
-for_window [app_id="wpa-cute"] floating enable, move position 100 ppt 100 ppt, move left 520, move up 750
+for_window [app_id="wpa-cute"] floating enable, move position 100 ppt 100 ppt, move left 500, move up 1040
 #
 # Example configuration:
 #
