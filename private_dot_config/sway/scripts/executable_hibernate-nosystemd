@@ -1,0 +1,13 @@
+#!/bin/bash
+if [ -f ~/.cache/power/alarm.lock ] 
+then
+  rm ~/.cache/power/suspend.lock
+  ~/.config/sway/scripts/wakeup.sh 
+  #~/newyear.sh
+else
+  ~/.config/sway/scripts/lock 
+  rm ~/.cache/power/suspend.lock
+  #systemd-inhibit --what=handle-lid-switch sleep 3s &
+  sleep 2
+  sudo ~/.config/sway/scripts/power.sh hibernate
+fi

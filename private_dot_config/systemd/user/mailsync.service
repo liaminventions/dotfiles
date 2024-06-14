@@ -1,7 +1,0 @@
-[Unit]
-Description=Synchronize neomutt email with mbsync
-Documentation=https://github.com/LukeSmithxyz/mutt-wizard
-
-[Service]
-ExecStart=/usr/local/bin/mailsync
-Type=oneshot

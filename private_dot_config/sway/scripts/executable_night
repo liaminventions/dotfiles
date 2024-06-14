@@ -1,0 +1,3 @@
+CACHE_DIR="$HOME/.cache/eww"
+[ -f "$CACHE_DIR/night.lock" ] && rm "$CACHE_DIR/night.lock" || touch "$CACHE_DIR/night.lock"
+[ -f "$CACHE_DIR/night.lock" ] && gammastep -P -O 5000 || killall gammastep

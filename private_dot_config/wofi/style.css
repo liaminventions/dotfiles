@@ -12,6 +12,7 @@
 }
 
 window {
+    size: 30% 60%;
     background-color: @background;
     border-radius: 10px;
     border: 1px solid @outline;

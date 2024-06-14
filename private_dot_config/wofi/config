@@ -1,9 +1,11 @@
 monitor=DP-1
 show=drun
 columns=2
-width=35%
+halign=center
+valign=center
+width=400%
 no_actions=true
 allow_images=true
 insensitive=true
 image_size=50
-prompt= Search...
+prompt= Search..
