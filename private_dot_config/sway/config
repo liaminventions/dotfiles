@@ -39,8 +39,7 @@ for_window [app_id="qalc"] floating enable
 for_window [app_id="qalc"] border none
 for_window [app_id="qalc"] resize set 768 648
 
-for_window [app_id="qalc"] floating enable
-
+for_window [app_id="wpa-cute"] floating enable, move position 100 ppt 100 ppt, move left 520, move up 750
 #
 # Example configuration:
 #
