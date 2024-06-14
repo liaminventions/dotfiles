@@ -1,6 +1,6 @@
 export GTK_THEME=Adwaita:dark
 export PATH=~/.npm-global/bin:$PATH
-eval `ssh-agent -s`
+#eval `ssh-agent -s`
 
 export WINEESYNC=1
 

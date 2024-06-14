@@ -1,6 +1,7 @@
 # Read `man 5 sway` for a complete reference.
 
 exec gpg-connect-agent --no-autostart reloadagent /bye
+exec udiskie -a
 exec ~/.config/sway/scripts/lock_boot
 exec ~/.config/sway/scripts/pipewire-pulse.sh
 exec ~/.config/sway/scripts/cachesetup
