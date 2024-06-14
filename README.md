@@ -1,12 +1,12 @@
-# dotfiles
-![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/example.png)
-![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/eww_example1.png)
+# dotfiles - sway-nosystemd branch
+this branch is a version of the dotfiles that works on sway, also in artix-dinit
+![](https://github.com/liaminventions/dotfiles/blob/sway-nosystemd/images/20240614-110215.png)
 
 managed by [chezmoi](https://github.com/twpayne/chezmoi).
 
 ## keyboard layout:
 
-![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/layout.svg)
+WIP
 
 ## etc
 
@@ -16,7 +16,7 @@ to copy this to `/etc`, run (while in clone dir)
 ```
 sudo cp -r etc/* /etc
 ```
-this directory has `etc/default/grub`, `mkinitcpio.conf`, and a getty login dropin file.
+this directory has `etc/default/grub`, `mkinitcpio.conf`
 
 now run the `hibernator` script (if you have swap set up.)
 
@@ -36,32 +36,13 @@ and reboot.
 
 # NOTES
 
-## usr
-
-there is a `usr` directory here aswell. this has a script (`lidswitch.sh`) in it that re-enables the lid switch after hibernating
-
-this fixes an issue where systemd suspends instead of hibernating if you close the lid right before `systemctl hibernate` is ran (in `~/.config/hypr/scripts/hibernate`) 
-
 ## waybar fonts
 
 `ttf-font-awesome` and `ttf-roboto-mono` are needed for waybar to show correctly.
 
 also, if you have a smaller screen resolution, consider un-commenting the `padding-right` css def in `~/.config/waybar/style.css`
 
-## nm-applet
-
-you might want to disable annoying "connection activated" notifications.
-
-those can be disabled with
-
-```
-gsettings set org.gnome.nm-applet disable-disconnected-notifications "true"
-gsettings set org.gnome.nm-applet disable-connected-notifications "true"
-```
-
-## cursor
-
-to set the cursor, open `nwg-look` and go to `Mouse cursor` and set the theme to `Posy's Cursor 125%`.
+overall, `~/.config/waybar/style.css` might need some sizes and padding adjusted for your screen
 
 ## wf-recorder
 
@@ -71,6 +52,6 @@ to do this, go to pavucontrol and to the "Recording" tab (while screen recording
 
 for example:
 
-![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/pa.png)
+PICTURE COMING SOON
 
 also, you only have to do this once, the settings will save.
