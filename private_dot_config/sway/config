@@ -39,6 +39,8 @@ for_window [app_id="qalc"] floating enable
 for_window [app_id="qalc"] border none
 for_window [app_id="qalc"] resize set 768 648
 
+for_window [app_id="qalc"] floating enable
+
 #
 # Example configuration:
 #

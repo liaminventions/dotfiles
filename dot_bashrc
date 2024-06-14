@@ -6,6 +6,8 @@
 [[ $- != *i* ]] && return
 
 export PATH=/home/waverider/.local/bin:$PATH
+[ -z "$EDITOR" ] && export EDITOR='lvim'
+[ -z "$VISUAL" ] && export VISUAL='lvim'
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
