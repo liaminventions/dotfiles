@@ -1,6 +1,8 @@
 # dotfiles - sway-nosystemd branch
 this branch is a version of the dotfiles that works on sway, also in artix-dinit
 ![](https://github.com/liaminventions/dotfiles/blob/sway-nosystemd/images/20240614-110215.png)
+waybar version:
+![](https://github.com/liaminventions/dotfiles/blob/sway-nosystemd/images/20240614-162519.png)
 
 managed by [chezmoi](https://github.com/twpayne/chezmoi).
 
