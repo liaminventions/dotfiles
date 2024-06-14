@@ -53,15 +53,15 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#custom-arch,
-#custom-arch {
+#custom-artix,
+#custom-artix {
   background: #4287f5;
   /* background: linear-gradient(45deg, rgba(202,158,230,1) 0%, rgba(245,194,231,1) 43%, rgba(180,190,254,1) 80%, rgba(137,180,250,1) 100%);
   */
   font-size: 18px;
   margin-left: 15px;
   margin-right: 10px;
-  padding-right: 5px;
+  padding-right: 6px;
 }
 
 #workspaces{

@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/arch", "sway/workspaces", "sway/mode"],
+    "modules-left": ["custom/artix", "sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "tray"],
     // Modules configuration
@@ -24,7 +24,7 @@
     //         "default": ""
     //     }
     // },
-    "custom/arch": {
+    "custom/artix": {
       "format": "  ",
       "tooltip": false,
       "on-click": "./.config/eww/iceberg/bar/scripts/widgets toggle-sys1"
