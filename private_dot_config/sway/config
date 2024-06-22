@@ -11,7 +11,9 @@ exec dunst
 exec wl-paste --watch cliphist store
 exec wl-clip-persist --clipboard regular --all-mime-type-regex '(?i)^(?!image/x-inkscape-svg).+'
 
-exec sh -c "sleep 5; wpa-cute -q -t"
+exec sh -c "sleep 1; wpa-cute -q -t"
+
+exec blueman-applet
 
 ### Variables
 #
@@ -250,7 +252,7 @@ bindsym $super+$shift+a exec wofi --show=run
 #bindsym $super+$shift+g exec xdg-open steam://rungameid/4000 >/dev/null 2>&1 &
 bindsym $super+$shift+x exec discord --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $super+$shift+f exec kitty --class=furnace-cli "~/.config/sway/scripts/furnace.sh"
-bindsym $super+$ctrl+d exec xdg-open "https://wakatime.com/dashboard"
+bindsym $super+$ctrl+d exec blueman-manager
 bindsym $super+$ctrl+e exec evolution
 #bindsym $super+$ctrl+Space exec ./.config/eww/iceberg/bar/scripts/widgets toggle-time
 bindsym $super+$ctrl+x exec bash -c "~/.config/sway/scripts/clip"
