@@ -13,8 +13,8 @@ if [ $1 == "enable" ]; then
   chmod 0600 /swapfile
   mkswap -U clear /swapfile
   swapon /swapfile
-  mkinitcpio -P
-  ~/hibernator
+  #mkinitcpio -P
+  /home/waverider/hibernator
 elif [ $1 == "disable" ]; then
   swapoff /swapfile
   /usr/bin/rm -f /swapfile
@@ -40,7 +40,7 @@ elif [ $1 == "disable" ]; then
 
   # END OF CHATGPT CODE
 
-  mkinitcpio -P
+  #mkinitcpio -P
   update-grub
 else
   echo "Unreconized paramater: ${1}"
