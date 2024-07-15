@@ -2,6 +2,6 @@
 set -ex
 url=$(wl-paste)
 cd ~/dot/dot\ v
-yt-dlp -vU -S proto:https --no-playlist $url
+yt-dlp -vU -S proto:https --no-playlist "$url"
 
 #-o "%(id)s.%(ext)s"
