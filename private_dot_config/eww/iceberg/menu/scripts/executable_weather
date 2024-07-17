@@ -48,25 +48,25 @@ function temp() {
 function icon() {
 	local ico=$(weather_get ".weather[0].icon" "")
 	case $ico in
-		"01d") echo "";;
-		"01n") echo "";;
-		"02d") echo "";;
-		"02n") echo "";;
-		"03d") echo "";;
-		"03n") echo "";;
-		"04d") echo "";;
-		"04n") echo "";;
-		"09d") echo "";;
-		"09n") echo "";;
-		"10d") echo "";;
-		"10n") echo "";;
-		"11d") echo "";;
-		"11n") echo "";;
-		"13d") echo "";;
-		"13n") echo "";;
-		"50d") echo "";;
-		"50n") echo "";;
-		*) echo "";;
+		"01d") echo "  ";;
+		"01n") echo "  ";;
+		"02d") echo "  ";;
+		"02n") echo "  ";;
+		"03d") echo "  ";;
+		"03n") echo "  ";;
+		"04d") echo "  ";;
+		"04n") echo "  ";;
+		"09d") echo "  ";;
+		"09n") echo "  ";;
+		"10d") echo "  ";;
+		"10n") echo "  ";;
+		"11d") echo "  ";;
+		"11n") echo "  ";;
+		"13d") echo "  ";;
+		"13n") echo "  ";;
+		"50d") echo "  ";;
+		"50n") echo "  ";;
+		*) echo "  ";;
 	esac
 }
 

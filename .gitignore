@@ -55,3 +55,4 @@ private_dot_config/private_xdg-desktop-portal-kderc
 private_dot_config/zoomus.conf
 private_dot_config/private_*
 private_dot_config/private_*/**
+private_dot_config/hypr/monitors.conf
