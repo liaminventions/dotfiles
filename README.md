@@ -44,9 +44,11 @@ this fixes an issue where systemd suspends instead of hibernating if you close t
 
 ## waybar fonts
 
-`ttf-font-awesome` and `ttf-roboto-mono` are needed for waybar to show correctly.
+`ttf-font-awesome`, `ttf-roboto-mono` and `ttf-roboto-mono-nerd` are needed for waybar to show correctly.
 
-also, if you have a smaller screen resolution, consider un-commenting the `padding-right` css def in `~/.config/waybar/style.css`
+also, if you have a smaller screen resolution, consider adjusting the `padding-right` css defs in `~/.config/waybar/style.css`
+
+also `noto-fonts` (mostly) is used everywhere else
 
 ## nm-applet
 
@@ -62,6 +64,8 @@ gsettings set org.gnome.nm-applet disable-connected-notifications "true"
 ## cursor
 
 to set the cursor, open `nwg-look` and go to `Mouse cursor` and set the theme to `Posy's Cursor 125%`.
+![image](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/posy.png)
+
 
 ## wf-recorder
 
@@ -74,3 +78,16 @@ for example:
 ![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/pa.png)
 
 also, you only have to do this once, the settings will save.
+
+## missing drivers/firmware
+
+on my hp-dy2024nr, the power button and lid does nothing, so, i made a fix.
+
+to enable it, just uncomment the `source=~/.config/hypr/missingdriversfix.conf` line in `hyprland.conf`
+
+## themes
+
+i use the `adwaita-icon-them`, `gnome-themes-extra`, and `epapirus-icon-theme` packages, and they can be set in `nwg-look`:
+![image](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/adwaita.png)
+![image](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/epap.png)
+
