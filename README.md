@@ -1,6 +1,7 @@
 # dotfiles
 ![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/example.png)
 ![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/eww_example1.png)
+![sway example](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/swayexample.png)
 
 managed by [chezmoi](https://github.com/twpayne/chezmoi).
 
@@ -92,3 +93,10 @@ i use the `adwaita-icon-them`, `gnome-themes-extra`, and `epapirus-icon-theme` p
 ![image](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/adwaita.png)
 ![image](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/epap.png)
 
+## sway
+
+if you want to open sway, just open a new TTY (`ctrl+alt+f2`) and run the `sway.sh` script (`./sway.sh`)
+
+to go back, just press `ctrl+alt+f1` to switch to the hyprland tty.
+
+to exit sway, press `super+shift+e` and press yes. you can now exit the tty `ctrl+d` and switch back to tty1.
