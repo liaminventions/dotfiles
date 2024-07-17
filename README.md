@@ -1,7 +1,10 @@
 # dotfiles
 ![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/example.png)
 ![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/eww_example1.png)
-![sway example](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/swayexample.png)
+
+sway example:
+
+![](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/swayexample.png)
 
 managed by [chezmoi](https://github.com/twpayne/chezmoi).
 
