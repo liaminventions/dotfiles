@@ -88,6 +88,7 @@ to enable it, just uncomment the `source=~/.config/hypr/missingdriversfix.conf` 
 ## themes
 
 i use the `adwaita-icon-them`, `gnome-themes-extra`, and `epapirus-icon-theme` packages, and they can be set in `nwg-look`:
+
 ![image](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/adwaita.png)
 ![image](https://raw.githubusercontent.com/liaminventions/dotfiles/main/images/epap.png)
 
