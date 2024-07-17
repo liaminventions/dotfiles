@@ -1,0 +1,16 @@
+[general]
+bars = 62
+autosens = 1
+sensitivity = 100.0
+framerate = 60
+[input]
+method = pulse
+[output]
+channels = mono
+mono_option = average
+method = raw
+raw_target = /dev/stdout
+bit_format = 16bit
+[smoothing]
+monstercat = 0
+noise_reduction = 1.0
