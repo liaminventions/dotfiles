@@ -2,8 +2,8 @@
 
 exec gpg-connect-agent --no-autostart reloadagent /bye
 exec udiskie -a
-exec ~/.config/hypr/scripts/lock_boot
-exec ~/.config/hypr/scripts/pipewire-pulse.sh
+#exec ~/.config/hypr/scripts/lock_boot
+#exec ~/.config/hypr/scripts/pipewire-pulse.sh
 exec ~/.config/hypr/scripts/cachesetup
 exec ~/.config/hypr/scripts/audio force-mute
 exec dunst
