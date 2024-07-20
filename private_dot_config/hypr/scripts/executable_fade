@@ -2,12 +2,11 @@
 #set -ex
 MAX=$(brightnessctl g)
 brightnessctl s 0
+~/.config/hypr/scripts/lock_boot
 CURRENT=0
-INDEX=MAX/100
 sleep 1.5
 while [ $CURRENT -le $MAX ]; do
   brightnessctl s $CURRENT -q;
-  CURRENT=$(($CURRENT + INDEX)) ;
+  CURRENT=$(($CURRENT + 200)) ;
 done
 sleep 1
-

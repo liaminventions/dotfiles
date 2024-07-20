@@ -11,7 +11,7 @@ trap "killall paplay; killall breaktimer; exit" TERM
 
 # activity whitelist
 chem_whitelist="Brave qalc Kalzium BASS kitten Cavasik cava Open chem math"
-math_whitelist="Brave qalc BASS kitten Cavasik cava Open math"
+math_whitelist="Brave qalc BASS kitten Cavasik cava Open math Picture"
 
 # window class whitelist
 chem_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview pinta vlc BreakTimer"
