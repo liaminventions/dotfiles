@@ -4,9 +4,9 @@ MAX=$(brightnessctl g)
 brightnessctl s 0
 ~/.config/hypr/scripts/lock_boot
 CURRENT=0
-sleep 1.5
+sleep 4
 while [ $CURRENT -le $MAX ]; do
   brightnessctl s $CURRENT -q;
-  CURRENT=$(($CURRENT + 200)) ;
+  CURRENT=$(($CURRENT + 100)) ;
 done
 sleep 1
