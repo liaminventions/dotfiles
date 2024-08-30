@@ -61,7 +61,7 @@ button:hover {
   font-size: 20px;
   margin-left: 15px;
   margin-right: 10px;
-  /* padding-right: 5px; */
+  padding-right: 5px;
 }
 
 #workspaces{
@@ -214,10 +214,12 @@ label:focus {
 #cpu {
     background-color: #2ecc71;
     color: #000000;
+    padding-right: 15px;
 }
 
 #memory {
     background-color: #9b59b6;
+    padding-right: 15px;
 }
 
 #disk {
@@ -230,6 +232,7 @@ label:focus {
 
 #network {
     background-color: #2980b9;
+    padding-right: 15px;
 }
 
 #network.disconnected {
@@ -245,6 +248,7 @@ label:focus {
     background-color: #f1c40f;
     color: #000000;
     margin-left: 50;
+    padding-right: 15px;
 }
 
 #pulseaudio.muted {
