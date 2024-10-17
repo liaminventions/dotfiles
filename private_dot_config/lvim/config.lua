@@ -7,7 +7,6 @@ a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
@@ -164,6 +163,7 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })
 --   },
 -- }
 
+
 if vim.fn.executable("wl-copy") == 0 then
   print("wl-clipboard not found, clipboard integration won't work")
 else
@@ -191,14 +191,36 @@ lvim.plugins = {
 --       "folke/trouble.nvim",
 --       cmd = "TroubleToggle",
     --
-       {"andweeb/presence.nvim"},
-       {"habamax/vim-godot"},
-    -- {"neoclide/coc.nvim"},
-       {"mfussenegger/nvim-jdtls"},
-       {"wakatime/vim-wakatime"},
-    -- {"hsanson/vim-android"},
+      {"andweeb/presence.nvim"},
+      {"habamax/vim-godot"},
+    --{"neoclide/coc.nvim"},
+      {"mfussenegger/nvim-jdtls"},
+      {"wakatime/vim-wakatime"},
+      {"mfussenegger/nvim-dap-python"},
+      {"nvim-neotest/nvim-nio"},
+      {"nvim-neotest/neotest"},
+      {"nvim-neotest/neotest-python"},
+      {"rcarriga/nvim-dap-ui"},
+  --  {"hsanson/vim-android"},
+  --    {'linux-cultist/venv-selector.nvim',
+  --      dependencies = { 'neovim/nvim-lspconfig', 'nvim-telescope/telescope.nvim', 'mfussenegger/nvim-dap-python' },
+  --      opts = {
+  --      -- Your options go here
+  --      -- name = "venv",
+  --      -- auto_refresh = false
+  --      },
+  --      event = 'VeryLazy', -- Optional: needed only if you want to type `:VenvSelect` without a keymapping
+  --      keys = {
+  --      -- Keymap to open VenvSelector to pick a venv.
+  --      { '<leader>vs', '<cmd>VenvSelect<cr>' },
+  --      -- Keymap to retrieve the venv from a cache (the one previously used for the same project directory).
+  --      { '<leader>vc', '<cmd>VenvSelectCached<cr>' },
+  --      },
+  --    },
     -- },
  }
+
+require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
 
 -- vim.g.android_sdk_path = {'/opt/android-sdk'}
 
@@ -215,3 +237,41 @@ lvim.plugins = {
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+local dap, dapui = require("dap"), require("dapui")
+dap.listeners.before.attach.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.launch.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated.dapui_config = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited.dapui_config = function()
+  dapui.close()
+end
+
+lvim.leader = "space"
+
+require("neotest").setup({
+  adapters = {
+    require("neotest-python")({
+      dap = {
+        justMyCode = false,
+        console = "integratedTerminal",
+      },
+      args = { "--log-level", "DEBUG", "--quiet" },
+      runner = "pytest",
+    })
+  }
+})
+
+lvim.builtin.which_key.mappings["dm"] = { "<cmd>lua require('neotest').run.run()<cr>",
+  "Test Method" }
+lvim.builtin.which_key.mappings["dM"] = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>",
+  "Test Method DAP" }
+lvim.builtin.which_key.mappings["df"] = {
+  "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>", "Test Class" }
+lvim.builtin.which_key.mappings["dF"] = {
+  "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>", "Test Class DAP" }
+lvim.builtin.which_key.mappings["dS"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" }
