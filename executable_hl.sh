@@ -36,7 +36,7 @@ export USER=waverider
 [ -z $XDG_RUNTIME_DIR ] && export XDG_RUNTIME_DIR=/run/user/1000
 [ -z $DBUS_SESSION_BUS_ADDRESS ] && export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 export PATH=~/.npm-global/bin:$PATH
-
+export PATH=/opt/wine-ge-custom/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-21-jdk
 
 export HYPRLAND_LOG_WLR=1

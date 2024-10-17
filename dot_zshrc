@@ -138,6 +138,7 @@ alias priv="/home/waverider/priv"
 alias rn="mv"
 alias v="/home/waverider/.local/bin/lvim"
 alias l="ls"
+alias ff="fastfetch"
 
 export EDITOR=lvim;
 export VISUAL=lvim;

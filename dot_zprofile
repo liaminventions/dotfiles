@@ -1,5 +1,9 @@
 export GTK_THEME=Adwaita:dark
+export VST3_PATH=/home/waverider/.vst3
 export MAILSYNC_MUTE=1
+export PATH=/opt/devkitpro/devkitARM/bin:/opt/devkitpro/tools/bin:$PATH
+export DEVKITARM=/opt/devkitpro/devkitARM/
+export DEVKITPRO=/opt/devkitpro/
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec /home/waverider/hl.sh
 fi

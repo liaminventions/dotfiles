@@ -9,7 +9,7 @@ fi
 if [ $1 == "enable" ]; then
   #swapoff /swapfile
   #rm -f /swapfile
-  dd if=/dev/zero of=/swapfile bs=1M count=8k status=progress
+  #dd if=/dev/zero of=/swapfile bs=1M count=8k status=progress
   chmod 0600 /swapfile
   mkswap -U clear /swapfile
   swapon /swapfile
