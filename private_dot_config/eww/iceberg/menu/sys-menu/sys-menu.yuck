@@ -21,7 +21,7 @@
        :orientation "h"
        :hexpand true
        :spacing 15
-    (box :class "user-pfp" :halign "start" :valign "center" :style "background-image: url('assets/waverider2.png');")
+    (box :class "user-pfp" :halign "start" :valign "center" :style "background-image: url('assets/pfp2v1.png');")
     (box :class "user-details"
          :orientation "v"
          :space-evenly false
