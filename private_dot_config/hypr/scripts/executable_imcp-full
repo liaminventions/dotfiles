@@ -1,10 +1,11 @@
 date=$(date +%Y%m%d-%H%M%S)
+date+="$(hostname)"
 if [ ! -f ~/.cache/eww/chem.lock ]; then
   FILE=/home/waverider/Pictures/Screenshots/chem/"$date".png
 elif [ ! -f ~/.cache/eww/math.lock ]; then
   FILE=/home/waverider/Pictures/Screenshots/math/"$date".png
 else
-  FILE=/home/waverider/Pictures/Screenshots/"$date".png
+  FILE=/home/waverider/Pictures/Screenshots/${date}.png
 fi
 grim $FILE && wl-copy < $FILE
 #grimblast --freeze copysave screen $FILE
