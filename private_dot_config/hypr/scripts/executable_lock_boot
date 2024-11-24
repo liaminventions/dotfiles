@@ -1,4 +1,5 @@
 #!/bin/sh
+gpg-connect-agent --no-autostart reloadagent /bye
 swaylock \
 -i $(cat ~/.config/hypr/current_wall) \
 --indicator \
