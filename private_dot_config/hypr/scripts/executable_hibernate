@@ -5,7 +5,7 @@ then
   ~/wakeup.sh 
   #~/newyear.sh
 else
-  ~/.config/hypr/scripts/lock 
+  ~/.config/hypr/scripts/lock # comment this line out if you're using disk encryption 
   rm ~/.cache/power/suspend.lock
   #systemd-inhibit --what=handle-lid-switch sleep 3s &
   sleep 2
