@@ -118,7 +118,7 @@ alias task="gotop"
 alias dua="baobab"
 alias chmox="chmod +x"
 alias neo="neofetch"
-alias music="/home/waverider/cmus-discord-rpc/target/release/cmus-discord-rpc & cmus"
+alias music="~/cmus-discord-rpc/target/release/cmus-discord-rpc & cmus"
 alias see="kitty icat"
 alias la="ls -al"
 
@@ -127,16 +127,16 @@ alias rmdir='rmdirtrash'
 alias sudo='sudo '
 
 alias ed="chezmoi edit --apply"
-alias ad="/home/waverider/added"
+alias ad="~/added"
 alias pu="chezmoi git push"
 alias pl="chezmoi git pull"
 alias gcs="chezmoi git status"
 alias zc="chezmoi cd"
-alias co="/home/waverider/commit"
-alias copu="/home/waverider/copu"
-alias priv="/home/waverider/priv"
+alias co="~/commit"
+alias copu="~/copu"
+alias priv="~/priv"
 alias rn="mv"
-alias v="/home/waverider/.local/bin/lvim"
+alias v="~/.local/bin/lvim"
 alias l="ls"
 alias cls="clear"
 
@@ -148,4 +148,9 @@ export VISUAL=lvim;
 export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:/home/waverider/.local/share/gem/ruby/3.0.0/bin
+export PATH=$PATH:~/.local/share/gem/ruby/3.0.0/bin
+
+mkcd () {
+  mkdir "$1"
+  cd "$1"
+}
