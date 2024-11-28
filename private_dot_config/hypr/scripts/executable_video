@@ -1,0 +1,12 @@
+#!/bin/sh
+date=$(date +%Y%m%d-%H%M%S)
+date+="$(hostname)"
+if [[ $1 == "full" ]]; then
+  wf-recorder --audio -f /home/waverider/Videos/full-"$date".mp4
+elif [[ $1 == "area" ]]; then
+  wf-recorder -g "$(slurp)" --audio -f /home/waverider/Videos/clip-"$date".mp4
+elif [[ $1 == "audio" ]]; then
+  parec --file-format=wav ~/Music/captures/capture-"$date".wav
+elif [[ $1 == "stop" ]]; then
+  killall -s SIGINT wf-recorder; killall -s SIGINT parec
+fi
