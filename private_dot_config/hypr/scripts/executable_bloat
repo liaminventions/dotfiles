@@ -1,3 +1,4 @@
+#!/bin/sh
 CACHE_DIR="$HOME/.cache/power"
 
 function debloat() { 

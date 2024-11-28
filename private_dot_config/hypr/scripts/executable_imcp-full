@@ -1,3 +1,4 @@
+#!/bin/sh
 date=$(date +%Y%m%d-%H%M%S)
 date+="$(hostname)"
 if [ ! -f ~/.cache/eww/chem.lock ]; then

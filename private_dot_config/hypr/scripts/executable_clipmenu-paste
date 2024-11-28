@@ -1,3 +1,4 @@
+#!/bin/sh
 # NOTE: ONLY SUPPORTS TEXT
 
 set -ex

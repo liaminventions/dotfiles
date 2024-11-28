@@ -1,1 +1,2 @@
+#!/bin/sh
 cliphist list | xargs -d "\n" printf "%q\n" | wofi --dmenu --pre-display-cmd "echo -n %s | cut -z -f 2" | xargs -0 -I {} bash -c "echo {}" | cliphist decode | wl-copy
