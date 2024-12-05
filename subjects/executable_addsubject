@@ -1,5 +1,4 @@
 #!/bin/sh
-set -ex
 
 if [ "$#" -lt 4 ]; then
   echo "Usage: $0 <subject_name> <title_whitelist_items_comma_separated> <class_whitelist_items_comma_separated> <icon>"

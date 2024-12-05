@@ -1,5 +1,4 @@
 #!/bin/bash
-set -ex
 
 # Script to dynamically add subjects to the discipline script
 TARGET_SCRIPT="$HOME/.config/hypr/scripts/discipline"
