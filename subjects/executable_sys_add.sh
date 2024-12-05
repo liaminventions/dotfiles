@@ -14,7 +14,7 @@ ICON="$2"
 cp "$TARGET" "${TARGET}.bak"
 
 LINE1="(deflisten act-${SUBJECT} \"scripts/subjects act-${SUBJECT}\")"
-LINE2="(button :class \"act-${SUBJECT} act$\{act-${SUBJECT}.state\}\" :onclick \"./scripts/subjects toggle-${SUBJECT}\" :tooltip \"${SUBJECT}\" \" ${ICON} \")"
+LINE2="    (button :class \"act-${SUBJECT} act$\{act-${SUBJECT}.state\}\" :onclick \"./scripts/subjects toggle-${SUBJECT}\" :tooltip \"${SUBJECT}\" \" ${ICON} \")"
 
 sed -i "/${SUBJECT}/d" $TARGET
 
