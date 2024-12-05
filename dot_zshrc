@@ -139,6 +139,8 @@ alias rn="mv"
 alias v="~/.local/bin/lvim"
 alias l="ls"
 alias cls="clear"
+alias clearl="clear;ls"
+alias clss="clear;ls"
 
 export EDITOR=lvim;
 export VISUAL=lvim;
