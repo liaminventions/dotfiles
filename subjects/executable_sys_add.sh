@@ -5,6 +5,7 @@ TARGET="$HOME/.config/eww/iceberg/menu/sys-menu/sys-menu.yuck"
 
 if [ "$#" -lt 1 ]; then
   echo "Usage: $0 <subject> <icon>"
+  echo "Refer to https://www.nerdfonts.com/cheat-sheet for icon refrence (or just use emojis)"
   exit 1
 fi
 

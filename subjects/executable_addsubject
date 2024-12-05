@@ -2,6 +2,7 @@
 
 if [ "$#" -lt 4 ]; then
   echo "Usage: $0 <subject> <title_whitelist_items_comma_separated> <class_whitelist_items_comma_separated> <icon>"
+  echo "Refer to https://www.nerdfonts.com/cheat-sheet for icon refrence (or just use emojis)"
   exit 1
 fi
 
