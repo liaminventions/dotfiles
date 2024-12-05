@@ -4,7 +4,7 @@
 TARGET="$HOME/.config/eww/iceberg/menu/sys-menu/sys-menu.yuck"
 
 if [ "$#" -lt 1 ]; then
-  echo "Usage $0 <subjectname><icon>"
+  echo "Usage: $0 <subject> <icon>"
   exit 1
 fi
 

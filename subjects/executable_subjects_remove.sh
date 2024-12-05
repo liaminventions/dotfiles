@@ -4,7 +4,7 @@
 TARGET="$HOME/.config/eww/iceberg/menu/scripts/subjects"
 
 if [ "$#" -lt 1 ]; then
-  echo "Usage $0 <subjectname>"
+  echo "Usage: $0 <subject>"
   exit 1
 fi
 

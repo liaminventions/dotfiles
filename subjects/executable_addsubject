@@ -1,12 +1,13 @@
 #!/bin/sh
 
 if [ "$#" -lt 4 ]; then
-  echo "Usage: $0 <subject_name> <title_whitelist_items_comma_separated> <class_whitelist_items_comma_separated> <icon>"
+  echo "Usage: $0 <subject> <title_whitelist_items_comma_separated> <class_whitelist_items_comma_separated> <icon>"
   exit 1
 fi
 
 ./discipline_add.sh $1 $2 $3
 ./subjects_add.sh $1
 ./sys_add.sh $1 $4
+./imcp_add.sh $1
 
 echo "Done! Added a new subject! (${1}) ✨"

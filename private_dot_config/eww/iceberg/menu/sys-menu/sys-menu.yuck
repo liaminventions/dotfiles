@@ -141,7 +141,7 @@
     :hexpand true
     :spacing 15 
     (button :class "act-math act${act-math.state}" :onclick "./scripts/subjects toggle-math" :tooltip "math" "  ")
-(button :class "act-gov act${act-gov.state}" :onclick "./scripts/subjects toggle-gov" :tooltip "gov" "  ")
+    (button :class "act-gov act${act-gov.state}" :onclick "./scripts/subjects toggle-gov" :tooltip "gov" "  ")
 ))(defwindow sys-menu0 
    :monitor 0
    :stacking "fg"
