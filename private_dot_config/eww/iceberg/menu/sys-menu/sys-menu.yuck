@@ -78,6 +78,8 @@
 
 (deflisten act-math "scripts/subjects act-math")
 (deflisten act-gov "scripts/subjects act-gov")
+(deflisten act-codehs "scripts/subjects act-codehs")
+(deflisten act-english "scripts/subjects act-english")
 (defwidget media[]
   (box :class "media"
        :orientation "v"
@@ -142,6 +144,8 @@
     :spacing 15 
     (button :class "act-math act${act-math.state}" :onclick "./scripts/subjects toggle-math" :tooltip "math" "  ")
     (button :class "act-gov act${act-gov.state}" :onclick "./scripts/subjects toggle-gov" :tooltip "gov" "  ")
+    (button :class "act-codehs act${act-codehs.state}" :onclick "./scripts/subjects toggle-codehs" :tooltip "codehs" "  ")
+    (button :class "act-english act${act-english.state}" :onclick "./scripts/subjects toggle-english" :tooltip "english" "  ")
 ))(defwindow sys-menu0 
    :monitor 0
    :stacking "fg"

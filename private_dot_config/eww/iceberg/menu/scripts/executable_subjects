@@ -36,11 +36,47 @@ function follow_gov {
 		fi
 	done
 }
+function toggle-codehs {
+  [ -f "$CACHE_DIR/codehs.lock" ] && rm "$CACHE_DIR/codehs.lock" || touch "$CACHE_DIR/codehs.lock"
+  [ -f "$CACHE_DIR/codehs.lock" ] && killall discipline || "/home/waverider/.config/hypr/scripts/discipline" 
+}
+
+function follow_codehs {
+  [ -f "$CACHE_DIR/codehs.lock" ] && local status="off" || local status="on"
+  echo "{\"state\":\"$status\"}"
+	while sleep 0.1; do
+		[ -f "$CACHE_DIR/codehs.lock" ] && local ns="off" || local ns="on"
+		if [ $status != $ns ];then
+			status=$ns
+			echo "{\"state\":\"$status\"}"
+		fi
+	done
+}
+function toggle-english {
+  [ -f "$CACHE_DIR/english.lock" ] && rm "$CACHE_DIR/english.lock" || touch "$CACHE_DIR/english.lock"
+  [ -f "$CACHE_DIR/english.lock" ] && killall discipline || "/home/waverider/.config/hypr/scripts/discipline" 
+}
+
+function follow_english {
+  [ -f "$CACHE_DIR/english.lock" ] && local status="off" || local status="on"
+  echo "{\"state\":\"$status\"}"
+	while sleep 0.1; do
+		[ -f "$CACHE_DIR/english.lock" ] && local ns="off" || local ns="on"
+		if [ $status != $ns ];then
+			status=$ns
+			echo "{\"state\":\"$status\"}"
+		fi
+	done
+}
 case "$1" in
   "toggle-math") toggle-math;;
   "act-math") follow_math;;
   "toggle-gov") toggle-gov;;
   "act-gov") follow_gov;;
+  "toggle-codehs") toggle-codehs;;
+  "act-codehs") follow_codehs;;
+  "toggle-english") toggle-english;;
+  "act-english") follow_english;;
   *) echo "unknown command";;
 esac
 

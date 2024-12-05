@@ -21,6 +21,8 @@ function disabled() {
   if
     [ -f "$CACHE_DIR/math.lock" ] &&
     [ -f "$CACHE_DIR/gov.lock" ] &&
+    [ -f "$CACHE_DIR/codehs.lock" ] &&
+    [ -f "$CACHE_DIR/english.lock" ] &&
     true
     then
     exit
@@ -84,6 +86,62 @@ while sleep 0.25; do
         done
         if [ $hits != 1 ]; then
           for word2 in ${gov_class_whitelist}; do
+            if [[ "$windowclass" == *"$word2"* ]]; then
+              hits=1
+              break
+            else
+              hits=0
+            fi
+          done
+        fi
+      else
+        hits=1
+      fi
+    fi
+    # codehs whitelist
+    codehs_whitelist="Brave qalc BASS kitten Cavasik cava Open LibreWolf Settings AP kitty"
+    codehs_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave pinta BreakTimer qalc LibreWolf kitty NVIM"
+
+    if [ ! -f "$CACHE_DIR/codehs.lock" ]; then
+      if [ "$window" != "" ]; then
+        for word in ${codehs_whitelist}; do
+          if [[ "$window" == *"$word"* ]]; then
+            hits=1
+            break
+          else
+            hits=0
+          fi
+        done
+        if [ $hits != 1 ]; then
+          for word2 in ${codehs_class_whitelist}; do
+            if [[ "$windowclass" == *"$word2"* ]]; then
+              hits=1
+              break
+            else
+              hits=0
+            fi
+          done
+        fi
+      else
+        hits=1
+      fi
+    fi
+    # english whitelist
+    english_whitelist="qalc BASS kitten Cavasik cava Open Settings AP Khan Translate Wikipedia"
+    english_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave pinta BreakTimer qalc LibreWolf"
+
+    if [ ! -f "$CACHE_DIR/english.lock" ]; then
+      if [ "$window" != "" ]; then
+        for word in ${english_whitelist}; do
+          if [[ "$window" == *"$word"* ]]; then
+            hits=1
+            break
+          else
+            hits=0
+          fi
+        done
+        if [ $hits != 1 ]; then
+          for word2 in ${english_class_whitelist}; do
             if [[ "$windowclass" == *"$word2"* ]]; then
               hits=1
               break
