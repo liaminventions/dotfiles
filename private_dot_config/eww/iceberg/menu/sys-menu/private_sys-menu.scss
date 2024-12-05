@@ -377,19 +377,13 @@ scale.bright-scale trough slider {
 		//color: $dark-gray;
 	}
 
-	.act-math-off, .act-chem-off {
+	.actoff {
 		background-color: $dark-gray;
     border: 1px solid $dark-gray;
 		border-radius: 8px;
 	}
 
-	.act-math-on {
-		background-color: $mint;
-    border: 1px solid $mint;
-		color: $dark-gray;
-	}
-
-	.act-chem-on {
+	.acton {
 		background-color: $mint;
     border: 1px solid $mint;
 		color: $dark-gray;

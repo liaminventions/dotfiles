@@ -68,16 +68,16 @@
          :spacing 15
       (button :class "night night-${night.state}" :tooltip "night light" :onclick "scripts/sys toggle-night" {night.icon})
       (button :class "blue blue-${blue.state}" :tooltip "bluetooth" :onclick "scripts/sys toggle-blue" "")
-      (button :class "scr" :tooltip "take screenshot" :timeout "60s" :onclick "~/.config/eww/iceberg/bar/scripts/widgets toggle-sys ; ~/.local/.scripts/screen" ""))))
+      (button :class "scr" :tooltip "take screenshot" :timeout "60s" :onclick "~/.config/eww/iceberg/bar/scripts/widgets toggle-sys ; ~/.config/hypr/scripts/imcp-full" ""))))
 
 (deflisten wifi "scripts/sys wifi")
 (deflisten air "scripts/sys air")
 (deflisten dnd "scripts/sys dnd")
 (deflisten night "scripts/sys night")
 (deflisten blue "scripts/sys blue")
-(deflisten act-chem "scripts/sys act-chem")
-(deflisten act-math "scripts/sys act-math")
 
+(deflisten act-math "scripts/subjects act-math")
+(deflisten act-gov "scripts/subjects act-gov")
 (defwidget media[]
   (box :class "media"
        :orientation "v"
@@ -140,10 +140,9 @@
     :orientation "h"
     :hexpand true
     :spacing 15 
-    (button :class "act-chem act-chem-${act-chem.state}" :onclick "./scripts/sys toggle-chem" :tooltip "chemestry" "  ")
-    (button :class "act-math act-math-${act-math.state}" :onclick "./scripts/sys toggle-math" :tooltip "math" "  ")))
-
-(defwindow sys-menu0 
+    (button :class "act-math act${act-math.state}" :onclick "./scripts/subjects toggle-math" :tooltip "math" "  ")
+(button :class "act-gov act${act-gov.state}" :onclick "./scripts/subjects toggle-gov" :tooltip "gov" "  ")
+))(defwindow sys-menu0 
    :monitor 0
    :stacking "fg"
    :geometry (geometry :x "6px" :y "6px" :width "2px" :anchor "top left")

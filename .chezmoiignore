@@ -95,3 +95,4 @@
 .config/transmission/**
 .config/hypr/monitors.conf
 .config/btop/btop.log
+*.bak

@@ -109,41 +109,8 @@ function follow_blue() {
 
 function screenshot() {
 	eww -c "$HOME/.config/eww/iceberg/menu" close sys-menu
-	flameshot gui
-}
-
-function toggle-chem {
-  [ -f "$CACHE_DIR/chem.lock" ] && rm "$CACHE_DIR/chem.lock" || touch "$CACHE_DIR/chem.lock"
-  [ -f "$CACHE_DIR/chem.lock" ] && killall discipline || "$HOME/.config/hypr/scripts/discipline" 
-}
-
-function follow_chem {
-  [ -f "$CACHE_DIR/chem.lock" ] && local status="off" || local status="on"
-  echo "{\"state\":\"$status\"}"
-	while sleep 0.1; do
-		[ -f "$CACHE_DIR/chem.lock" ] && local ns="off" || local ns="on"
-		if [ $status != $ns ];then
-			status=$ns
-			echo "{\"state\":\"$status\"}"
-		fi
-	done
-}
-
-function toggle-math {
-  [ -f "$CACHE_DIR/math.lock" ] && rm "$CACHE_DIR/math.lock" || touch "$CACHE_DIR/math.lock"
-  [ -f "$CACHE_DIR/math.lock" ] && killall discipline || "$HOME/.config/hypr/scripts/discipline" 
-}
-
-function follow_math {
-  [ -f "$CACHE_DIR/math.lock" ] && local status="off" || local status="on"
-  echo "{\"state\":\"$status\"}"
-  while sleep 0.1; do
-		[ -f "$CACHE_DIR/math.lock" ] && local ns="off" || local ns="on"
-		if [ $status != $ns ];then
-			status=$ns
-			echo "{\"state\":\"$status\"}"
-		fi
-	done
+	#flameshot gui
+  ~/.config/hypr/scripts/imcp
 }
 
 case "$1" in

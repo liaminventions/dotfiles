@@ -1,0 +1,46 @@
+#!/bin/bash
+
+CACHE_DIR="$HOME/.cache/eww"
+
+
+function toggle-math {
+  [ -f "$CACHE_DIR/math.lock" ] && rm "$CACHE_DIR/math.lock" || touch "$CACHE_DIR/math.lock"
+  [ -f "$CACHE_DIR/math.lock" ] && killall discipline || "$HOME/.config/hypr/scripts/discipline" 
+}
+
+function follow_math {
+  [ -f "$CACHE_DIR/math.lock" ] && local status="off" || local status="on"
+  echo "{\"state\":\"$status\"}"
+  while sleep 0.1; do
+		[ -f "$CACHE_DIR/math.lock" ] && local ns="off" || local ns="on"
+		if [ $status != $ns ];then
+			status=$ns
+			echo "{\"state\":\"$status\"}"
+		fi
+	done
+}
+
+function toggle-gov {
+  [ -f "$CACHE_DIR/gov.lock" ] && rm "$CACHE_DIR/gov.lock" || touch "$CACHE_DIR/gov.lock"
+  [ -f "$CACHE_DIR/gov.lock" ] && killall discipline || "/home/waverider/.config/hypr/scripts/discipline" 
+}
+
+function follow_gov {
+  [ -f "$CACHE_DIR/gov.lock" ] && local status="off" || local status="on"
+  echo "{\"state\":\"$status\"}"
+	while sleep 0.1; do
+		[ -f "$CACHE_DIR/gov.lock" ] && local ns="off" || local ns="on"
+		if [ $status != $ns ];then
+			status=$ns
+			echo "{\"state\":\"$status\"}"
+		fi
+	done
+}
+case "$1" in
+  "toggle-math") toggle-math;;
+  "act-math") follow_math;;
+  "toggle-gov") toggle-gov;;
+  "act-gov") follow_gov;;
+  *) echo "unknown command";;
+esac
+

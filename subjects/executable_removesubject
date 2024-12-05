@@ -1,0 +1,13 @@
+#!/bin/sh
+set -ex
+
+if [ "$#" -lt 1 ]; then
+  echo "Usage: $0 <subject_name>"
+  exit 1
+fi
+
+./discipline_remove.sh $1
+./subjects_remove.sh $1
+./sys_remove.sh $1
+
+echo "Done! Removed subject ${1}"
