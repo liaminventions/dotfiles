@@ -5,4 +5,7 @@ touch ~/.cache/voice/voice.lock #make sure that voice dictation is disabled on b
 /usr/bin/rm ~/.cache/eww/night.lock
 touch ~/.cache/power/suspend.lock
 touch ~/.cache/power/night.lock
-touch ~/.cache/eww/chem.lock; touch ~/.cache/eww/math.lock
+touch ~/.cache/eww/chem.lock
+touch ~/.cache/eww/math.lock
+touch ~/.cache/eww/gov.lock
+touch ~/.cache/eww/codehs.lock

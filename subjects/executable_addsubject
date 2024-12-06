@@ -10,5 +10,6 @@ fi
 ./subjects_add.sh $1
 ./sys_add.sh $1 $4
 ./imcp_add.sh $1
+./cachesetup_add.sh $1
 
 echo "Done! Added a new subject! (${1}) ✨"
