@@ -5,8 +5,8 @@
 [global]
     monitor = 0
     follow = mouse
-    width = (0, 500)
-    height = (200, 500)
+    width = (0, 200)
+    #height = (200, 500)
     origin = top-right
     offset = 10x10
     indicate_hidden = yes
@@ -15,7 +15,7 @@
     transparency = 0
     notification_height = 0
     separator_height = 2
-    padding = 12
+    padding = 0 0
     horizontal_padding = 12
     frame_width = 1
     frame_color = "#8aadf4"
@@ -43,7 +43,7 @@
     sticky_nano = yes
     history_length = 50
     dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/brave
+    browser = /usr/bin/librewolf
     always_run_script = true
     title = Dunst
     class = Dunst
@@ -85,14 +85,3 @@
     summary="Screenshot"
     max_icon_size = 300
 
-;[eww]
-;summary = "*"
-;script = "~/.local/.scripts/notifs"
-
-;[spotify]
-;summary = "*"
-;script = "~/.local/.scripts/spotify-art"
-
-;[spotify-icon]
-;appname = "Spotify"
-;icon = "~/.cache/temp.png"
