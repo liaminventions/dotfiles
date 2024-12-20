@@ -153,6 +153,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:~/.local/share/gem/ruby/3.0.0/bin
 
 mkcd () {
-  mkdir "$1"
-  cd "$1"
+  case "$1" in /*) :;; *) set -- "./$1";; esac
+  mkdir -p "$1" && cd "$1"
 }
