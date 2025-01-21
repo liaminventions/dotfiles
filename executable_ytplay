@@ -1,0 +1,4 @@
+#!/bin/sh
+rm tmp.mp4
+yt-dlp -vU -S proto:https --no-playlist "$1" -o tmp.mp4
+mpv --profile=fast --vo=gpu tmp*
