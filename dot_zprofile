@@ -1,9 +1,18 @@
+export NETWORK_DISPLAYS_DUMMY=1
 export GTK_THEME=Adwaita:dark
+export PATH=:/opt/wine-ge-custom/bin:$PATH
+export PATH=:/usr/bin/vendor_perl:$PATH
 export VST3_PATH=/home/waverider/.vst3
 export MAILSYNC_MUTE=1
+export BROWSER=librewolf
+#export LC_ALL=C
 export PATH=/opt/devkitpro/devkitARM/bin:/opt/devkitpro/tools/bin:$PATH
 export DEVKITARM=/opt/devkitpro/devkitARM/
 export DEVKITPRO=/opt/devkitpro/
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec /home/waverider/hl.sh
 fi
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/waverider/.local/share/JetBrains/Toolbox/scripts"
