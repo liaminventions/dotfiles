@@ -1,0 +1,14 @@
+#!/bin/sh
+url=$(wl-paste)
+if curl --head --silent "$url" > /dev/null 2>&1; then
+  name=$(curl -Ls "$url" | grep '<title>' |sed 's/<[^>]*>//g')
+  cd ~/Documents
+  mkdir "$name"
+  cd "$name"
+  wget -mpEk "$url"
+  echo "Success!"
+  exit 0
+else
+  echo "Not a valid link"
+  exit 1
+fi
