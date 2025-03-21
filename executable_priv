@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 mv ~/.zsh_history ~/.zh
 zsh
 rm ~/.zsh_history
