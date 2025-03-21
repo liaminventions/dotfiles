@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script to dynamically add a subject to the subjects script
+# Script to dynamically add a subject to the sys script
 TARGET="$HOME/.config/eww/iceberg/menu/sys-menu/sys-menu.yuck"
 
 if [ "$#" -lt 1 ]; then

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script to dynamically add a subject to the subjects script
+# Script to dynamically remove a subject from the subjects script
 TARGET="$HOME/.config/eww/iceberg/menu/scripts/subjects"
 
 if [ "$#" -lt 1 ]; then
