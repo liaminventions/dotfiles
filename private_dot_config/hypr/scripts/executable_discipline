@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -ex
+set -ex
 
 CACHE_DIR="/home/waverider/.cache/eww"
 
@@ -10,10 +10,10 @@ trap "killall paplay; killall breaktimer; exit" TERM
 # checks if the focused window is on-topic to the current focus activity
 
 # activity whitelist
-math_whitelist="Brave qalc BASS kitten Cavasik cava Open math Picture LibreWolf"
+math_whitelist="Brave qalc BASS kitten Cavasik cava Open math Picture LibreWolf krita"
 
 # window class whitelist
-math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview pinta vlc BreakTimer qalc LibreWolf"
+math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview pinta vlc BreakTimer qalc LibreWolf krita"
 
 hits=1
 
@@ -28,7 +28,7 @@ function disabled() {
   fi
 } 
 
-/opt/appimages/BreakTimer.AppImage & disown 
+#/opt/appimages/BreakTimer.AppImage & disown 
 
 while sleep 0.25; do
   disabled

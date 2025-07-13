@@ -11,9 +11,9 @@ function debloat() {
 
 function bloat() {
   touch "$CACHE_DIR/debloat.lock"
-  swww init
-  exec waybar &
-  # exec eww daemon -c ~/.config/eww/iceberg/menu &
+  swww-daemon & disown
+    exec waybar &
+  exec eww daemon -c ~/.config/eww/iceberg/menu &
   eww -c ~/.config/eww/bg open clock &
   eww -c ~/.config/eww/bg open bot &
   hyprctl keyword animations:enabled 1
