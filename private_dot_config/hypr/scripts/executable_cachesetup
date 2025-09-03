@@ -7,5 +7,5 @@ touch ~/.cache/power/suspend.lock
 touch ~/.cache/power/night.lock
 touch ~/.cache/eww/chem.lock
 touch ~/.cache/eww/math.lock
-touch ~/.cache/eww/gov.lock
-touch ~/.cache/eww/codehs.lock
+touch ~/.cache/eww/web.lock
+touch ~/.cache/eww/cts.lock

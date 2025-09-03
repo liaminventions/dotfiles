@@ -4,11 +4,11 @@ date+="$(hostname)"
 if [ ! -f ~/.cache/eww/chem.lock ]; then
   FILE=$HOME/Pictures/Screenshots/chem/"$date".png
 elif [ ! -f ~/.cache/eww/math.lock ]; then
-  FILE=$HOME/Pictures/Screenshots/math/"$date".png
-elif [ ! -f ~/.cache/eww/gov.lock ]; then
-  FILE=$HOME/Pictures/Screenshots/gov/${date}.png
-elif [ ! -f ~/.cache/eww/codehs.lock ]; then
-  FILE=$HOME/Pictures/Screenshots/codehs/${date}.png
+  FILE=$HOME/Pictures/Screenshots/math/${date}.png
+elif [ ! -f ~/.cache/eww/web.lock ]; then
+  FILE=$HOME/Pictures/Screenshots/web/${date}.png
+elif [ ! -f ~/.cache/eww/cts.lock ]; then
+  FILE=$HOME/Pictures/Screenshots/cts/${date}.png
 else
   FILE=$HOME/Pictures/Screenshots/${date}.png
 fi

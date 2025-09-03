@@ -10,7 +10,7 @@ trap "killall paplay; killall breaktimer; exit" TERM
 # checks if the focused window is on-topic to the current focus activity
 
 # activity whitelist
-math_whitelist="Brave qalc BASS kitten Cavasik cava Open math Picture LibreWolf krita"
+math_whitelist="Brave qalc BASS kitten Cavasik cava Open math Picture LibreWolf krita mpv"
 
 # window class whitelist
 math_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview pinta vlc BreakTimer qalc LibreWolf krita"
@@ -20,8 +20,8 @@ hits=1
 function disabled() {
   if
     [ -f "$CACHE_DIR/math.lock" ] &&
-    [ -f "$CACHE_DIR/gov.lock" ] &&
-    [ -f "$CACHE_DIR/codehs.lock" ] &&
+    [ -f "$CACHE_DIR/web.lock" ] &&
+    [ -f "$CACHE_DIR/cts.lock" ] &&
     true
     then
     exit
@@ -69,13 +69,13 @@ while sleep 0.25; do
       fi
     fi
 
-    # gov whitelist
-    gov_whitelist="Brave qalc BASS kitten Cavasik cava Open LibreWolf Settings AP Khanacademy"
-    gov_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave org.kde.gwenview pinta vlc BreakTimer qalc LibreWolf"
+    # web whitelist
+    web_whitelist="Brave qalc BASS kitten Cavasik cava Open LibreWolf Settings Central Piedmont kitty Translate Wikipedia"
+    web_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave pinta BreakTimer qalc LibreWolf"
 
-    if [ ! -f "$CACHE_DIR/gov.lock" ]; then
+    if [ ! -f "$CACHE_DIR/web.lock" ]; then
       if [ "$window" != "" ]; then
-        for word in ${gov_whitelist}; do
+        for word in ${web_whitelist}; do
           if [[ "$window" == *"$word"* ]]; then
             hits=1
             break
@@ -84,7 +84,7 @@ while sleep 0.25; do
           fi
         done
         if [ $hits != 1 ]; then
-          for word2 in ${gov_class_whitelist}; do
+          for word2 in ${web_class_whitelist}; do
             if [[ "$windowclass" == *"$word2"* ]]; then
               hits=1
               break
@@ -97,13 +97,13 @@ while sleep 0.25; do
         hits=1
       fi
     fi
-    # codehs whitelist
-    codehs_whitelist="Brave qalc BASS kitten Cavasik cava Open LibreWolf Settings AP kitty"
-    codehs_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave pinta BreakTimer qalc LibreWolf kitty NVIM"
+    # cts whitelist
+    cts_whitelist="Brave qalc BASS kitten Cavasik cava Open LibreWolf Settings Central Piedmont Translate Wikipedia"
+    cts_class_whitelist="nemo bassmod org.gnome.Loupe cmus zenity pavucontrol blueman-manager Brave pinta BreakTimer qalc LibreWolf"
 
-    if [ ! -f "$CACHE_DIR/codehs.lock" ]; then
+    if [ ! -f "$CACHE_DIR/cts.lock" ]; then
       if [ "$window" != "" ]; then
-        for word in ${codehs_whitelist}; do
+        for word in ${cts_whitelist}; do
           if [[ "$window" == *"$word"* ]]; then
             hits=1
             break
@@ -112,7 +112,7 @@ while sleep 0.25; do
           fi
         done
         if [ $hits != 1 ]; then
-          for word2 in ${codehs_class_whitelist}; do
+          for word2 in ${cts_class_whitelist}; do
             if [[ "$windowclass" == *"$word2"* ]]; then
               hits=1
               break
