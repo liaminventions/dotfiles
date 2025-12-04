@@ -10,4 +10,4 @@ duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wr
 
 bitrate=$(echo "(($mb*1024*1024*8)/$duration)/1000"|bc)"k"
 
-ffmpeg -i $in -b:v $bitrate -fflags +genpts -r 60 -y $out
+ffmpeg -i $in -c:v libsvtav1 -b:v $bitrate -fflags +genpts -r 60 -y $out
